@@ -5,35 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>STOC Advisory | U.S. Medical Aesthetics Market Report 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
 <style>
 
-/* ── RESET ── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ── STOC BRAND TOKENS ── */
+/* ── STOC TOKENS ── */
 :root {
-  --navy:       #0D1B2F;   /* STOC primary dark navy */
-  --navy-mid:   #1A2D47;
-  --white:      #FFFFFF;
-  --off-white:  #F5F4F0;
-  --rule:       #D6D0C8;
-  --body:       #1C1C1C;   /* near-black for body copy -- NOT pure black */
-  --mid-gray:   #4A5568;   /* secondary text -- NOT #888 */
-  --light-gray: #6B7280;
-  --page-bg:    #E6E2DC;
-  /* A4 */
+  --navy:    #0D1B2F;
+  --white:   #FFFFFF;
+  --body:    #1A1A1A;      /* Bain body text: near-black, NOT pure */
+  --gray:    #3D3D3D;      /* secondary text */
+  --lgray:   #6E6E6E;      /* captions, footers */
+  --rule:    #D4CEC6;
+  --bg:      #E4E0DA;
   --pw: 794px;
   --ph: 1123px;
 }
 
-/* ── TYPOGRAPHY ── */
-/* Playfair Display = matches STOC's serif headline font */
-/* Source Sans 3    = clean professional body / UI font  */
-
 body {
-  background: var(--page-bg);
-  font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg);
+  font-family: 'DM Sans', sans-serif;
   padding: 48px 0 80px;
   display: flex;
   flex-direction: column;
@@ -41,968 +33,619 @@ body {
   gap: 40px;
 }
 
-/* ── PAGE SHELL ── */
 .page {
   width: var(--pw);
   height: var(--ph);
   background: var(--white);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  box-shadow: 0 6px 36px rgba(0,0,0,0.20);
 }
 
 
-/* ══════════════════════════════════════════════════════
-   PAGE 1  —  COVER
-   (Bain cover structure: photo fills top ~58%, bold title
-   block below on white, logo top-left of photo)
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   PAGE 1 — COVER
+   Bain: full-bleed photo top ~57%, white block
+   below with bold sans title, logo top-left of photo
+   ══════════════════════════════════════════════ */
 
-.cover {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+.cover { height: 100%; display: flex; flex-direction: column; }
 
-/* PHOTO ZONE — top 652px */
 .cover-photo {
   position: relative;
-  height: 652px;
+  height: 644px;
   flex-shrink: 0;
   overflow: hidden;
 }
 
-/* Placeholder fill */
 .cover-photo-fill {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(175deg, #1C3A58 0%, #2A4E6E 45%, #1C3A58 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #1B3550 0%, #274E6C 50%, #1E3D58 100%);
+  display: flex; align-items: center; justify-content: center;
 }
 
 .ph-label {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 9px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 400;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 8px 16px;
 }
 
-/* Vertical red stripe lines — LEFT edge of photo, exactly like Bain */
-/* Bain uses ~4 thin vertical lines of varying opacity */
+/* Left-edge vertical stripes — matches Bain exactly */
 .cover-stripes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 14px;
-  display: flex;
-  align-items: stretch;
-  gap: 3px;
-  padding: 0 1px;
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 12px; display: flex; gap: 2.5px; padding: 0 1px;
 }
-.cover-stripes span {
-  display: block;
-  flex: 1;
-  background: var(--navy);
+.cover-stripes s {
+  display: block; flex: 1;
+  background: var(--navy); text-decoration: none;
 }
-.cover-stripes span:nth-child(1) { opacity: 1;    }
-.cover-stripes span:nth-child(2) { opacity: 0.55; }
-.cover-stripes span:nth-child(3) { opacity: 0.25; }
+.cover-stripes s:nth-child(1) { opacity: 1;   }
+.cover-stripes s:nth-child(2) { opacity: 0.5; }
+.cover-stripes s:nth-child(3) { opacity: 0.2; }
 
-/* Logo top-left on photo */
+/* Logo top-left of photo */
 .cover-logo {
-  position: absolute;
-  top: 36px;
-  left: 40px;
-  display: flex;
-  align-items: center;
-  gap: 11px;
+  position: absolute; top: 32px; left: 36px;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-box {
+  width: 42px; height: 42px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.18);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); text-align: center; line-height: 1.4;
+}
+.logo-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.88); line-height: 1;
+}
+.logo-name span {
+  display: block; font-size: 8px; font-weight: 400;
+  letter-spacing: 2px; color: rgba(255,255,255,0.45); margin-top: 3px;
 }
 
-.logo-img-placeholder {
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.22);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 7px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: rgba(255,255,255,0.4);
-  text-transform: uppercase;
-  line-height: 1.3;
-  text-align: center;
-}
-
-.logo-wordmark {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
-  line-height: 1;
-}
-.logo-wordmark span {
-  display: block;
-  font-size: 8px;
-  font-weight: 400;
-  letter-spacing: 2.5px;
-  color: rgba(255,255,255,0.5);
-  margin-top: 3px;
-}
-
-/* WHITE TITLE BLOCK — Bain style: white space below photo */
+/* White lower block — Bain has logo here too in some versions,
+   but primarily: topic label, large bold title, rule, meta */
 .cover-lower {
-  flex: 1;
-  background: var(--white);
-  padding: 38px 44px 34px 44px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex: 1; background: var(--white);
+  padding: 34px 40px 32px;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
 
-.cover-topic-label {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin-bottom: 16px;
-  opacity: 0.55;
+/* "Healthcare Services · Medical Aesthetics" — same small caps style as Bain */
+.cover-kicker {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--lgray);
+  margin-bottom: 14px;
 }
 
+/* Title — Bain uses a very bold heavy sans, tight leading
+   "Global Healthcare Private Equity Report 2025" ~ 40px bold */
 .cover-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.07;
-  color: var(--navy);
-  letter-spacing: -0.5px;
-  max-width: 640px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 44px; font-weight: 800;
+  line-height: 1.06; color: var(--body);
+  letter-spacing: -1px;
+  max-width: 660px;
 }
 
 .cover-rule {
-  width: 100%;
-  height: 1px;
-  background: var(--rule);
-  margin: 26px 0;
+  height: 1px; background: var(--rule); margin: 22px 0;
 }
 
-.cover-meta-row {
-  display: flex;
-  align-items: flex-end;
+.cover-meta {
+  display: flex; align-items: flex-end;
   justify-content: space-between;
 }
-
-.cover-by {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--mid-gray);
-  line-height: 1.7;
+.cover-byline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 400;
+  color: var(--lgray); line-height: 1.65;
 }
-.cover-by strong {
-  display: block;
-  font-weight: 600;
-  color: var(--body);
-  font-size: 12px;
-  margin-bottom: 2px;
+.cover-byline strong {
+  display: block; font-weight: 600;
+  color: var(--gray); font-size: 11.5px; margin-bottom: 2px;
 }
-
 .cover-year {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--navy);
-  opacity: 0.18;
-  letter-spacing: 1px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px; font-weight: 300;
+  color: var(--navy); opacity: 0.15; letter-spacing: 2px;
 }
 
 
-/* ══════════════════════════════════════════════════════
-   PAGE 2  —  DISCLAIMER
-   (Clean white page, logo + wordmark top-left,
-   small body text, copyright at very bottom)
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   PAGE 2 — DISCLAIMER
+   Bain: logo top-left, plain gray body text,
+   copyright line at bottom
+   ══════════════════════════════════════════════ */
 
-.disclaimer-page {
-  height: 100%;
-  padding: 60px 72px 60px;
-  display: flex;
-  flex-direction: column;
+.disc-page {
+  height: 100%; padding: 60px 68px;
+  display: flex; flex-direction: column;
 }
 
-.disc-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 72px;
+.disc-logo-row {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 64px;
 }
-
-.disc-logo-img {
-  width: 38px;
-  height: 38px;
+.disc-logo-box {
+  width: 36px; height: 36px;
   background: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 7px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  line-height: 1.3;
-  text-align: center;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 6px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); text-align: center; line-height: 1.4;
 }
-
-.disc-logo-text {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.disc-logo-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
   color: var(--navy);
 }
 
+/* Bain disclaimer: ~10.5px, gray, generous leading, 500px wide */
 .disc-body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--mid-gray);
-  line-height: 1.9;
-  max-width: 580px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px; font-weight: 400;
+  color: var(--lgray); line-height: 1.85;
+  max-width: 560px;
 }
+.disc-body p + p { margin-top: 18px; }
 
-.disc-body p + p {
-  margin-top: 20px;
-}
-
-.disc-copyright {
+.disc-foot {
   margin-top: auto;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  color: var(--light-gray);
-  padding-top: 28px;
+  padding-top: 24px;
   border-top: 1px solid var(--rule);
-  letter-spacing: 0.3px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9.5px; font-weight: 400;
+  color: var(--lgray); letter-spacing: 0.2px;
 }
 
 
-/* ══════════════════════════════════════════════════════
-   PAGE 3  —  ABOUT STOC + CDS
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   SHARED: RUNNING HEADER
+   Bain: "BAIN & COMPANY ⊕" centered between two
+   thin rules, doc title below in small text.
+   We do: logo + STOC ADVISORY left | doc title right
+   ══════════════════════════════════════════════ */
 
-/* Bain's running header: thin rule / centered brand+mark / thin rule / doc title */
-.page-header {
+.pg-header {
   border-bottom: 1px solid var(--rule);
-  padding: 16px 44px;
-  display: flex;
-  align-items: center;
+  padding: 15px 40px;
+  display: flex; align-items: center;
   justify-content: space-between;
 }
-
-.ph-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.pgh-left {
+  display: flex; align-items: center; gap: 9px;
 }
-
-.ph-logo-img {
-  width: 30px;
-  height: 30px;
+.pgh-logo {
+  width: 28px; height: 28px;
   background: var(--navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 6px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 5.5px; font-weight: 600;
+  letter-spacing: 0.8px; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); text-align: center; line-height: 1.4;
+}
+.pgh-brand {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--navy);
+}
+.pgh-doc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; font-weight: 400;
+  letter-spacing: 0.3px; color: var(--lgray);
 }
 
-.ph-brand {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+/* PAGE FOOTER */
+.pg-footer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  border-top: 1px solid var(--rule);
+  padding: 10px 40px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+}
+.pgf-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; font-weight: 400;
+  color: var(--lgray); letter-spacing: 0.2px;
+}
+.pgf-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 600;
   color: var(--navy);
 }
 
-.ph-doc {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9.5px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: var(--light-gray);
-  font-style: italic;
+
+/* ══════════════════════════════════════════════
+   PAGE 3 — ABOUT STOC + CDS
+   ══════════════════════════════════════════════ */
+
+.p3-body {
+  /* leaves room for fixed footer */
+  padding-bottom: 40px;
 }
 
-/* ── ABOUT TOP HALF ── */
-.about-top {
-  padding: 38px 44px 34px;
+/* ── About top section ── */
+.about-section {
+  padding: 32px 40px 28px;
   border-bottom: 1.5px solid var(--navy);
 }
 
-.section-label {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.45;
-  margin-bottom: 18px;
+/* Bain section label: small all-caps, medium weight, near-black */
+.section-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 3.5px; text-transform: uppercase;
+  color: var(--body); opacity: 0.4;
+  margin-bottom: 16px;
 }
 
-.about-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.25;
-  max-width: 560px;
-  margin-bottom: 18px;
+/* Bain chapter headline style: ~28-32px, bold, tight */
+.about-head {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px; font-weight: 700;
+  line-height: 1.18; color: var(--body);
+  letter-spacing: -0.4px;
+  max-width: 580px; margin-bottom: 14px;
 }
 
-.about-body-text {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--body);
-  line-height: 1.75;
-  max-width: 660px;
-  margin-bottom: 26px;
+/* Bain body copy: 10.5-11px, regular, #1A1A1A, line-height 1.7 */
+.body-copy {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 400;
+  color: var(--body); line-height: 1.72;
+  max-width: 680px;
 }
 
-/* Mission + Vision two columns — matches STOC website layout */
-.mission-vision-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin-bottom: 26px;
+/* Mission / Vision two-col */
+.mv-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 28px; margin: 20px 0 22px;
 }
-
-.mv-block {}
-
 .mv-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--navy);
-  margin-bottom: 7px;
-}
-
-.mv-text {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11.5px;
-  font-weight: 400;
-  color: var(--mid-gray);
-  line-height: 1.7;
-}
-
-/* Values — 4 cards in a row, navy background matching STOC site */
-.values-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.val-card {
-  background: var(--navy);
-  padding: 14px 16px;
-}
-
-.val-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: var(--body); margin-bottom: 6px;
   letter-spacing: 0.2px;
 }
-
-.val-body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.55;
+.mv-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px; font-weight: 400;
+  color: var(--gray); line-height: 1.65;
 }
 
-/* ── CDS BOTTOM HALF ── */
+/* Values — navy cards, same as STOC site */
+.vals {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+.val {
+  background: var(--navy); padding: 13px 15px;
+}
+.val-t {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 700;
+  color: var(--white); margin-bottom: 4px;
+}
+.val-b {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 400;
+  color: rgba(255,255,255,0.52); line-height: 1.5;
+}
+
+/* ── CDS bottom section ── */
 .cds-section {
-  padding: 32px 44px 0;
-  flex: 1;
+  padding: 26px 40px 0;
 }
 
-.cds-headline {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1.2;
-  margin-bottom: 10px;
-  max-width: 540px;
+.cds-head {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px; font-weight: 700;
+  line-height: 1.2; color: var(--body);
+  letter-spacing: -0.3px;
+  max-width: 520px; margin-bottom: 10px;
 }
 
 .cds-intro {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--body);
-  line-height: 1.75;
-  max-width: 660px;
-  margin-bottom: 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 400;
+  color: var(--body); line-height: 1.72;
+  max-width: 680px; margin-bottom: 20px;
 }
 
-/* 3-step process */
-.process-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+/* 2 × 3 deliverables grid */
+.deliv-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1.5px solid var(--navy);
+  border-left: 1px solid var(--rule);
 }
-
-.proc-step {
-  border-top: 2px solid var(--navy);
-  padding-top: 12px;
-}
-
-.proc-num {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--navy);
-  opacity: 0.4;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-
-.proc-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 5px;
-  line-height: 1.3;
-}
-
-.proc-body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10.5px;
-  color: var(--mid-gray);
-  line-height: 1.6;
-}
-
-/* Deliverables grid 3x2 */
-.deliverables-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid var(--rule);
-}
-
-.deliv-item {
+.deliv {
   padding: 14px 16px;
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-
-.deliv-item:nth-child(3n) { border-right: none; }
-.deliv-item:nth-child(4),
-.deliv-item:nth-child(5),
-.deliv-item:nth-child(6) { border-bottom: none; }
-
-.deliv-num {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  color: var(--navy);
-  opacity: 0.35;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+.deliv-n {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 2.5px; color: var(--body); opacity: 0.28;
+  margin-bottom: 5px; text-transform: uppercase;
 }
-
-.deliv-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--body);
-  line-height: 1.3;
-  margin-bottom: 4px;
+.deliv-t {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: var(--body); line-height: 1.3; margin-bottom: 4px;
 }
-
-.deliv-body {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  color: var(--mid-gray);
-  line-height: 1.55;
-}
-
-/* ── PAGE FOOTER ── */
-.page-footer {
-  padding: 12px 44px;
-  border-top: 1px solid var(--rule);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--white);
-}
-
-.pf-text {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9px;
-  color: var(--light-gray);
-  letter-spacing: 0.3px;
-}
-
-.pf-num {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--navy);
+.deliv-b {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 400;
+  color: var(--gray); line-height: 1.55;
 }
 
 
-/* ══════════════════════════════════════════════════════
-   PAGE 4  —  TABLE OF CONTENTS
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   PAGE 4 — TABLE OF CONTENTS
+   Bain: "Contents" plain, medium weight (~32px),
+   rule, numbered entries, group headers in caps
+   ══════════════════════════════════════════════ */
 
 .toc-body {
-  padding: 44px 44px 80px;
+  padding: 40px 40px 80px;
 }
 
-.toc-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--navy);
-  letter-spacing: -0.5px;
-  margin-bottom: 12px;
-  line-height: 1;
+/* "Contents" — Bain uses medium/regular weight, NOT heavy bold */
+.toc-h {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px; font-weight: 500;
+  color: var(--body); letter-spacing: -0.5px;
+  margin-bottom: 10px; line-height: 1;
+}
+.toc-rule {
+  height: 1.5px; background: var(--body);
+  margin-bottom: 32px;
 }
 
-.toc-divider {
-  height: 2px;
-  background: var(--navy);
-  margin-bottom: 36px;
-}
-
-/* Section group header */
-.toc-group-header {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.4;
-  padding: 18px 0 10px;
+/* Group header — small all-caps, same as Bain section dividers */
+.toc-grp {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 3.5px; text-transform: uppercase;
+  color: var(--body); opacity: 0.38;
+  padding: 16px 0 9px;
   border-bottom: 1px solid var(--rule);
   margin-bottom: 2px;
 }
 
-/* Single TOC entry */
-.toc-entry {
-  display: flex;
-  align-items: baseline;
-  padding: 8.5px 0;
-  border-bottom: 1px solid rgba(214,208,200,0.5);
+/* TOC entry row */
+.toc-row {
+  display: flex; align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(212,206,198,0.45);
 }
-
-.toc-entry:last-of-type {
-  border-bottom: none;
+.tr-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 500;
+  color: var(--body); opacity: 0.32;
+  width: 26px; flex-shrink: 0;
 }
-
-.te-num {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  color: var(--navy);
-  opacity: 0.35;
-  width: 26px;
-  flex-shrink: 0;
-  letter-spacing: 0.5px;
+.tr-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 400;
+  color: var(--body); flex: 1;
+  padding-right: 10px; line-height: 1.4;
 }
-
-.te-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 12.5px;
-  font-weight: 400;
-  color: var(--body);
-  flex: 1;
-  padding-right: 12px;
-}
-
-.te-dots {
-  flex: 1;
-  max-width: 200px;
-  border-bottom: 1px dotted #C0B8B0;
+.tr-dots {
+  flex: 1; max-width: 190px;
+  border-bottom: 1px dotted #BCB5AE;
   margin: 0 10px;
-  position: relative;
-  top: -3px;
+  position: relative; top: -3px;
+}
+.tr-pg {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 500;
+  color: var(--body);
+  width: 18px; text-align: right; flex-shrink: 0;
 }
 
-.te-pg {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--navy);
-  width: 20px;
-  text-align: right;
-  flex-shrink: 0;
-}
-
-/* Spacer between groups */
-.toc-group-gap {
-  height: 6px;
-}
+.toc-gap { height: 4px; }
 
 </style>
 </head>
 <body>
 
 
-<!-- ═══════════════════════════════════
+<!-- ═══════════════════════════
      PAGE 1 — COVER
-     ═══════════════════════════════════ -->
+     ═══════════════════════════ -->
 <div class="page">
-  <div class="cover">
+<div class="cover">
 
-    <!-- Photo block (top ~58%) -->
-    <div class="cover-photo">
-
-      <!-- Placeholder image fill -->
-      <div class="cover-photo-fill">
-        <div class="ph-label">Cover Photo Placeholder</div>
-      </div>
-
-      <!-- Left-edge stripe lines (like Bain) -->
-      <div class="cover-stripes">
-        <span></span><span></span><span></span>
-      </div>
-
-      <!-- Logo top-left -->
-      <div class="cover-logo">
-        <div class="logo-img-placeholder">LOGO<br>HERE</div>
-        <div class="logo-wordmark">
-          STOC
-          <span>Advisory</span>
-        </div>
-      </div>
-
+  <div class="cover-photo">
+    <div class="cover-photo-fill">
+      <div class="ph-label">Cover Photo Placeholder</div>
     </div>
-
-    <!-- White title block (bottom ~42%) -->
-    <div class="cover-lower">
-      <div>
-        <div class="cover-topic-label">Healthcare Services &nbsp;&middot;&nbsp; Medical Aesthetics</div>
-        <div class="cover-title">U.S. Medical Aesthetics<br>Market Report 2026</div>
-        <div class="cover-rule"></div>
-        <div class="cover-meta-row">
-          <div class="cover-by">
-            <strong>STOC Advisory Corporate Development Support</strong>
-            Baltimore, MD &nbsp;&middot;&nbsp; Minneapolis, MN &nbsp;&middot;&nbsp; Nashville, TN &nbsp;&middot;&nbsp; Dallas, TX
-          </div>
-          <div class="cover-year">2026</div>
-        </div>
-      </div>
+    <div class="cover-stripes">
+      <s></s><s></s><s></s>
     </div>
-
+    <div class="cover-logo">
+      <div class="logo-box">LOGO<br>HERE</div>
+      <div class="logo-name">STOC<span>Advisory</span></div>
+    </div>
   </div>
+
+  <div class="cover-lower">
+    <div>
+      <div class="cover-kicker">Healthcare Services &nbsp;&middot;&nbsp; Medical Aesthetics</div>
+      <div class="cover-title">U.S. Medical Aesthetics<br>Market Report 2026</div>
+      <div class="cover-rule"></div>
+      <div class="cover-meta">
+        <div class="cover-byline">
+          <strong>STOC Advisory &nbsp;&middot;&nbsp; Corporate Development Support</strong>
+          Baltimore, MD &nbsp;&middot;&nbsp; Minneapolis, MN &nbsp;&middot;&nbsp; Nashville, TN &nbsp;&middot;&nbsp; Dallas, TX
+        </div>
+        <div class="cover-year">2026</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>
 
 
-<!-- ═══════════════════════════════════
+<!-- ═══════════════════════════
      PAGE 2 — DISCLAIMER
-     ═══════════════════════════════════ -->
+     ═══════════════════════════ -->
 <div class="page">
-  <div class="disclaimer-page">
+<div class="disc-page">
 
-    <div class="disc-logo">
-      <div class="disc-logo-img">LOGO<br>HERE</div>
-      <div class="disc-logo-text">STOC Advisory</div>
-    </div>
-
-    <div class="disc-body">
-      <p>This work is based on secondary market research and analysis of financial information available to or compiled by STOC Advisory. STOC Advisory has not independently verified all such information and makes no representation or warranty, express or implied, that such information is accurate or complete.</p>
-
-      <p>Projected market and financial information, analyses, and conclusions contained herein are based on the information described above and on STOC Advisory's professional judgment. They should not be construed as definitive forecasts or guarantees of future performance or results.</p>
-
-      <p>The information and analysis contained in this document does not constitute investment, legal, accounting, or other advice of any kind, and is not intended to be used for investment purposes. Neither STOC Advisory nor any of its subsidiaries or their respective officers, directors, shareholders, employees, or agents accept any responsibility or liability with respect to the use of or reliance on any information or analysis contained in this document.</p>
-
-      <p>This work is the property of STOC Advisory, LLC and may not be published, transmitted, broadcast, copied, reproduced, or reprinted in whole or in part without the explicit written permission of STOC Advisory.</p>
-    </div>
-
-    <div class="disc-copyright">
-      Copyright &copy; 2026 STOC Advisory, LLC. All rights reserved.
-    </div>
-
+  <div class="disc-logo-row">
+    <div class="disc-logo-box">LOGO<br>HERE</div>
+    <div class="disc-logo-name">STOC Advisory</div>
   </div>
+
+  <div class="disc-body">
+    <p>This work is based on secondary market research and analysis of financial information available to or compiled by STOC Advisory. STOC Advisory has not independently verified all such information and makes no representation or warranty, express or implied, that such information is accurate or complete.</p>
+
+    <p>Projected market and financial information, analyses, and conclusions contained herein are based on the information described above and on STOC Advisory's professional judgment. They should not be construed as definitive forecasts or guarantees of future performance or results.</p>
+
+    <p>The information and analysis contained in this document does not constitute investment, legal, accounting, or other advice of any kind, and is not intended to be used for investment purposes. Neither STOC Advisory nor any of its subsidiaries or their respective officers, directors, shareholders, employees, or agents accept any responsibility or liability with respect to the use of or reliance on any information or analysis contained in this document.</p>
+
+    <p>This work is the property of STOC Advisory, LLC and may not be published, transmitted, broadcast, copied, reproduced, or reprinted in whole or in part without the explicit written permission of STOC Advisory.</p>
+  </div>
+
+  <div class="disc-foot">
+    Copyright &copy; 2026 STOC Advisory, LLC. All rights reserved.
+  </div>
+
+</div>
 </div>
 
 
-<!-- ═══════════════════════════════════
-     PAGE 3 — ABOUT STOC + CDS
-     ═══════════════════════════════════ -->
+<!-- ═══════════════════════════
+     PAGE 3 — ABOUT + CDS
+     ═══════════════════════════ -->
 <div class="page" style="display:flex; flex-direction:column;">
 
-  <!-- Running header -->
-  <div class="page-header">
-    <div class="ph-logo-row">
-      <div class="ph-logo-img">LOGO<br>HERE</div>
-      <div class="ph-brand">STOC Advisory</div>
+  <div class="pg-header">
+    <div class="pgh-left">
+      <div class="pgh-logo">LOGO<br>HERE</div>
+      <div class="pgh-brand">STOC Advisory</div>
     </div>
-    <div class="ph-doc">U.S. Medical Aesthetics Market Report 2026</div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
   </div>
 
-  <!-- About STOC — top half -->
-  <div class="about-top">
+  <div class="p3-body">
 
-    <div class="section-label">About STOC Advisory</div>
+    <!-- About STOC -->
+    <div class="about-section">
+      <div class="section-tag">About STOC Advisory</div>
+      <div class="about-head">Partnering with middle-market businesses and private equity sponsors to accelerate growth, mitigate risk, and deliver lasting impact.</div>
+      <div class="body-copy">STOC Advisory is a business advisory firm specializing in transaction advisory services, corporate development, and CFO advisory. We work alongside management teams and private equity sponsors through every stage of the acquisition lifecycle, bringing rigorous financial analysis and hands-on execution to each engagement. Our teams operate out of Baltimore, Minneapolis, Nashville, and Dallas, built for the middle market and accountable to each client as a dedicated partner.</div>
 
-    <div class="about-headline">
-      Partnering with middle-market businesses and private equity sponsors to accelerate growth, mitigate risk, and deliver lasting impact.
-    </div>
+      <div class="mv-grid">
+        <div>
+          <div class="mv-label">Mission</div>
+          <div class="mv-body">To deliver tailored financial insights and strategic guidance that drive successful transactions and long-term growth.</div>
+        </div>
+        <div>
+          <div class="mv-label">Vision</div>
+          <div class="mv-body">To be the most trusted advisor for middle-market companies and private equity partners.</div>
+        </div>
+      </div>
 
-    <div class="about-body-text">
-      STOC Advisory is a business advisory firm specializing in transaction advisory services, corporate development, and CFO advisory. We work alongside management teams and private equity sponsors through every stage of the acquisition lifecycle, bringing rigorous financial analysis and hands-on execution to each engagement. Our teams are built for the middle market, operating with the depth of a large firm and the accountability of a dedicated partner.
-    </div>
-
-    <div class="mission-vision-row">
-      <div class="mv-block">
-        <div class="mv-label">Mission</div>
-        <div class="mv-text">To deliver tailored financial insights and strategic guidance that drive successful transactions and long-term growth.</div>
-      </div>
-      <div class="mv-block">
-        <div class="mv-label">Vision</div>
-        <div class="mv-text">To be the most trusted advisor for middle-market companies and private equity partners.</div>
-      </div>
-    </div>
-
-    <div class="values-row">
-      <div class="val-card">
-        <div class="val-title">Integrity</div>
-        <div class="val-body">Upholding the highest ethical standards.</div>
-      </div>
-      <div class="val-card">
-        <div class="val-title">Collaboration</div>
-        <div class="val-body">Partnering closely with management teams.</div>
-      </div>
-      <div class="val-card">
-        <div class="val-title">Excellence</div>
-        <div class="val-body">Delivering rigorous, data-driven analysis.</div>
-      </div>
-      <div class="val-card">
-        <div class="val-title">Innovation</div>
-        <div class="val-body">Adapting to evolving market dynamics.</div>
+      <div class="vals">
+        <div class="val"><div class="val-t">Integrity</div><div class="val-b">Upholding the highest ethical standards.</div></div>
+        <div class="val"><div class="val-t">Collaboration</div><div class="val-b">Partnering closely with management teams.</div></div>
+        <div class="val"><div class="val-t">Excellence</div><div class="val-b">Delivering rigorous, data-driven analysis.</div></div>
+        <div class="val"><div class="val-t">Innovation</div><div class="val-b">Adapting to evolving market dynamics.</div></div>
       </div>
     </div>
 
-  </div>
+    <!-- CDS -->
+    <div class="cds-section">
+      <div class="section-tag">Corporate Development Support (CDS)</div>
+      <div class="cds-head">Hands-On M&amp;A Support, From Pipeline to Close</div>
+      <div class="cds-intro">STOC's Corporate Development Support practice helps private equity-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. We bring proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management to sponsors and platforms that want to move with conviction. The work is hands-on and embedded alongside internal teams.</div>
 
-  <!-- CDS — bottom half -->
-  <div class="cds-section">
-
-    <div class="section-label" style="margin-top:0;">Corporate Development Support (CDS)</div>
-
-    <div class="cds-headline">Hands-On M&amp;A Support, From Pipeline to Close</div>
-
-    <div class="cds-intro">
-      STOC's Corporate Development Support practice helps private equity-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. We bring proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management to sponsors and platforms that want to move with conviction. The work is hands-on and embedded.
-    </div>
-
-    <div class="deliverables-grid">
-      <div class="deliv-item">
-        <div class="deliv-num">01</div>
-        <div class="deliv-title">Proactive Deal Sourcing</div>
-        <div class="deliv-body">Target identification through direct outreach, relationship-building, and market mapping.</div>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">02</div>
-        <div class="deliv-title">Target Screening &amp; Fit</div>
-        <div class="deliv-body">Evaluating strategic alignment, financial profile, operational readiness, and integration fit.</div>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">03</div>
-        <div class="deliv-title">CRM &amp; Pipeline Management</div>
-        <div class="deliv-body">Building and maintaining the deal CRM with standardized stages and disciplined follow-up.</div>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">04</div>
-        <div class="deliv-title">Diligence Coordination</div>
-        <div class="deliv-body">Aligning internal stakeholders, gathering materials, and flagging early deal issues.</div>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">05</div>
-        <div class="deliv-title">Valuation &amp; Deal Tracking</div>
-        <div class="deliv-body">Compiling financials, normalizing data, and providing valuation context for bid decisions.</div>
-      </div>
-      <div class="deliv-item">
-        <div class="deliv-num">06</div>
-        <div class="deliv-title">Leadership Reporting</div>
-        <div class="deliv-body">Pipeline summaries, weekly deal updates, and IC-ready materials for sponsors.</div>
+      <div class="deliv-grid">
+        <div class="deliv"><div class="deliv-n">01</div><div class="deliv-t">Proactive Deal Sourcing</div><div class="deliv-b">Target identification through direct outreach, relationship-building, and market mapping.</div></div>
+        <div class="deliv"><div class="deliv-n">02</div><div class="deliv-t">Target Screening &amp; Fit</div><div class="deliv-b">Evaluating strategic alignment, financial profile, and integration fit.</div></div>
+        <div class="deliv"><div class="deliv-n">03</div><div class="deliv-t">CRM &amp; Pipeline Management</div><div class="deliv-b">Building and maintaining the deal CRM with standardized stages and disciplined follow-up.</div></div>
+        <div class="deliv"><div class="deliv-n">04</div><div class="deliv-t">Diligence Coordination</div><div class="deliv-b">Aligning internal stakeholders, gathering materials, and flagging early deal issues.</div></div>
+        <div class="deliv"><div class="deliv-n">05</div><div class="deliv-t">Valuation &amp; Deal Tracking</div><div class="deliv-b">Compiling financials, normalizing data, and providing valuation context for bid decisions.</div></div>
+        <div class="deliv"><div class="deliv-n">06</div><div class="deliv-t">Leadership Reporting</div><div class="deliv-b">Pipeline summaries, weekly deal updates, and IC-ready materials for sponsors.</div></div>
       </div>
     </div>
 
   </div>
 
-  <!-- Page footer -->
-  <div class="page-footer">
-    <div class="pf-text">STOC Advisory &nbsp;&middot;&nbsp; Corporate Development Support</div>
-    <div class="pf-num">3</div>
+  <div class="pg-footer">
+    <div class="pgf-text">STOC Advisory &nbsp;&middot;&nbsp; Corporate Development Support</div>
+    <div class="pgf-num">3</div>
   </div>
 
 </div>
 
 
-<!-- ═══════════════════════════════════
+<!-- ═══════════════════════════
      PAGE 4 — TABLE OF CONTENTS
-     ═══════════════════════════════════ -->
+     ═══════════════════════════ -->
 <div class="page" style="display:flex; flex-direction:column;">
 
-  <!-- Running header -->
-  <div class="page-header">
-    <div class="ph-logo-row">
-      <div class="ph-logo-img">LOGO<br>HERE</div>
-      <div class="ph-brand">STOC Advisory</div>
+  <div class="pg-header">
+    <div class="pgh-left">
+      <div class="pgh-logo">LOGO<br>HERE</div>
+      <div class="pgh-brand">STOC Advisory</div>
     </div>
-    <div class="ph-doc">U.S. Medical Aesthetics Market Report 2026</div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
   </div>
 
   <div class="toc-body">
-    <div class="toc-title">Contents</div>
-    <div class="toc-divider"></div>
+    <div class="toc-h">Contents</div>
+    <div class="toc-rule"></div>
 
-    <!-- Section A: Market Overview -->
-    <div class="toc-group-header">Market Overview</div>
+    <div class="toc-grp">Market Overview</div>
+    <div class="toc-row"><div class="tr-num">01</div><div class="tr-title">The U.S. Medical Aesthetics Market: Size, Growth, and Composition</div><div class="tr-dots"></div><div class="tr-pg">5</div></div>
+    <div class="toc-row"><div class="tr-num">02</div><div class="tr-title">Demand Drivers and Consumer Behavior Shifts</div><div class="tr-dots"></div><div class="tr-pg">6</div></div>
+    <div class="toc-row"><div class="tr-num">03</div><div class="tr-title">Service Mix and Revenue Architecture</div><div class="tr-dots"></div><div class="tr-pg">7</div></div>
 
-    <div class="toc-entry">
-      <div class="te-num">01</div>
-      <div class="te-title">The U.S. Medical Aesthetics Market: Size, Growth, and Composition</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">5</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">02</div>
-      <div class="te-title">Demand Drivers and Consumer Behavior Shifts</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">6</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">03</div>
-      <div class="te-title">Service Mix and Revenue Architecture</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">7</div>
-    </div>
+    <div class="toc-gap"></div>
+    <div class="toc-grp">Competitive Landscape</div>
+    <div class="toc-row"><div class="tr-num">04</div><div class="tr-title">Market Fragmentation and Ownership Structure</div><div class="tr-dots"></div><div class="tr-pg">8</div></div>
+    <div class="toc-row"><div class="tr-num">05</div><div class="tr-title">Platform Players and Regional Consolidators</div><div class="tr-dots"></div><div class="tr-pg">9</div></div>
+    <div class="toc-row"><div class="tr-num">06</div><div class="tr-title">Digital Maturity and Technology Adoption</div><div class="tr-dots"></div><div class="tr-pg">10</div></div>
 
-    <div class="toc-group-gap"></div>
+    <div class="toc-gap"></div>
+    <div class="toc-grp">Investment Thesis</div>
+    <div class="toc-row"><div class="tr-num">07</div><div class="tr-title">Unit Economics, Margins, and EBITDA Benchmarks</div><div class="tr-dots"></div><div class="tr-pg">11</div></div>
+    <div class="toc-row"><div class="tr-num">08</div><div class="tr-title">Valuation Multiples and Transaction Comparables</div><div class="tr-dots"></div><div class="tr-pg">12</div></div>
+    <div class="toc-row"><div class="tr-num">09</div><div class="tr-title">Geographic Whitespace and Acquisition Pipeline Priorities</div><div class="tr-dots"></div><div class="tr-pg">13</div></div>
+    <div class="toc-row"><div class="tr-num">10</div><div class="tr-title">Competitive Pressure, Timing, and Deal Velocity</div><div class="tr-dots"></div><div class="tr-pg">14</div></div>
 
-    <!-- Section B: Competitive Landscape -->
-    <div class="toc-group-header">Competitive Landscape</div>
-
-    <div class="toc-entry">
-      <div class="te-num">04</div>
-      <div class="te-title">Market Fragmentation and Ownership Structure</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">8</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">05</div>
-      <div class="te-title">Platform Players and Regional Consolidators</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">9</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">06</div>
-      <div class="te-title">Digital Maturity and Technology Adoption</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">10</div>
-    </div>
-
-    <div class="toc-group-gap"></div>
-
-    <!-- Section C: Investment Thesis -->
-    <div class="toc-group-header">Investment Thesis</div>
-
-    <div class="toc-entry">
-      <div class="te-num">07</div>
-      <div class="te-title">Unit Economics, Margins, and EBITDA Benchmarks</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">11</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">08</div>
-      <div class="te-title">Valuation Multiples and Transaction Comparables</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">12</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">09</div>
-      <div class="te-title">Geographic Whitespace and Acquisition Pipeline Priorities</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">13</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">10</div>
-      <div class="te-title">Competitive Pressure, Timing, and Deal Velocity</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">14</div>
-    </div>
-
-    <div class="toc-group-gap"></div>
-
-    <!-- Section D: Value Creation -->
-    <div class="toc-group-header">Value Creation and Execution</div>
-
-    <div class="toc-entry">
-      <div class="te-num">11</div>
-      <div class="te-title">Consolidation Structure and Platform Build Strategy</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">15</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">12</div>
-      <div class="te-title">Target Quality Framework and Diligence Criteria</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">16</div>
-    </div>
-    <div class="toc-entry">
-      <div class="te-num">13</div>
-      <div class="te-title">CDS Positioning: From Market Intelligence to Execution</div>
-      <div class="te-dots"></div>
-      <div class="te-pg">17</div>
-    </div>
-
+    <div class="toc-gap"></div>
+    <div class="toc-grp">Value Creation and Execution</div>
+    <div class="toc-row"><div class="tr-num">11</div><div class="tr-title">Consolidation Structure and Platform Build Strategy</div><div class="tr-dots"></div><div class="tr-pg">15</div></div>
+    <div class="toc-row"><div class="tr-num">12</div><div class="tr-title">Target Quality Framework and Diligence Criteria</div><div class="tr-dots"></div><div class="tr-pg">16</div></div>
+    <div class="toc-row"><div class="tr-num">13</div><div class="tr-title">CDS Positioning: From Market Intelligence to Execution</div><div class="tr-dots"></div><div class="tr-pg">17</div></div>
   </div>
 
-  <!-- Page footer -->
-  <div class="page-footer">
-    <div class="pf-text">STOC Advisory &nbsp;&middot;&nbsp; U.S. Medical Aesthetics Market Report 2026</div>
-    <div class="pf-num">4</div>
+  <div class="pg-footer">
+    <div class="pgf-text">STOC Advisory &nbsp;&middot;&nbsp; U.S. Medical Aesthetics Market Report 2026</div>
+    <div class="pgf-num">4</div>
   </div>
 
 </div>
