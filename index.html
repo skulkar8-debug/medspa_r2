@@ -86,36 +86,18 @@ body {
   text-transform: uppercase;
 }
 
-/* Photo block — inset, starts ~95px from top, 32px side margins */
+/* Photo block — inset with side margins, top just below logo area.
+   Bottom edge sits DIRECTLY on top of the navy band — zero gap. */
 .cv-photo-wrap {
   position: absolute;
-  top: 95px;
+  top: 105px;
   left: 32px;
   right: 32px;
-  height: 590px;
+  bottom: 360px;   /* band height = 360px, photo bottom = band top exactly */
   overflow: hidden;
 }
 
-.cv-photo-fill {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(160deg, #1B3550 0%, #274E6C 50%, #1D3D58 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cv-ph-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 8px 18px;
-}
-
-/* Horizontal stripes — LEFT side of photo, stacked thin lines */
+/* Horizontal stripes on LEFT and RIGHT outside edges of photo */
 .cv-stripes-left {
   position: absolute;
   top: 0; left: 0;
@@ -125,46 +107,47 @@ body {
 .cv-stripes-left::before {
   content: '';
   position: absolute;
-  top: 0; left: -20px; bottom: 0;
-  width: 18px;
+  top: 0; left: -22px; bottom: 0;
+  width: 20px;
   background: repeating-linear-gradient(
     to bottom,
     var(--navy) 0px,
-    var(--navy) 3px,
-    transparent 3px,
-    transparent 8px
+    var(--navy) 4px,
+    transparent 4px,
+    transparent 10px
   );
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .cv-stripes-left::after {
   content: '';
   position: absolute;
-  top: 0; right: -20px; bottom: 0;
-  width: 18px;
+  top: 0; right: -22px; bottom: 0;
+  width: 20px;
   background: repeating-linear-gradient(
     to bottom,
     var(--navy) 0px,
-    var(--navy) 3px,
-    transparent 3px,
-    transparent 8px
+    var(--navy) 4px,
+    transparent 4px,
+    transparent 10px
   );
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* Navy band — bottom of page */
+/* Navy band — fixed height at bottom, title at TOP of band */
 .cv-band {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 408px;
+  height: 360px;
   background: var(--navy);
-  padding: 44px 44px 40px;
+  padding: 40px 44px 36px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
+/* Title sits at the top of the band — matches Bain exactly */
 .cv-band-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 50px;
@@ -173,34 +156,33 @@ body {
   color: var(--white);
   letter-spacing: -0.5px;
   max-width: 640px;
-  margin-bottom: 36px;
 }
 
 .cv-band-meta {
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  padding-top: 16px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 .cv-band-byline {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 400;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.40);
   line-height: 1.7;
 }
 .cv-band-byline strong {
   display: block;
   font-weight: 600;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.65);
   margin-bottom: 2px;
 }
 .cv-band-year {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 26px;
   font-weight: 300;
-  color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.10);
   letter-spacing: 3px;
 }
 
@@ -685,7 +667,7 @@ body {
     <div class="toc-row"><div class="tr-title">Digital Maturity and Technology Adoption</div><div class="tr-dots"></div><div class="tr-pg">10</div></div>
 
     <div class="toc-grp-label">Investment Thesis</div>
-    <div class="toc-row"><div class="tr-title">Unit Economics,// Benchmarks</div><div class="tr-dots"></div><div class="tr-pg">11</div></div>
+    <div class="toc-row"><div class="tr-title">Unit Economics, Margins, and EBITDA Benchmarks</div><div class="tr-dots"></div><div class="tr-pg">11</div></div>
     <div class="toc-row"><div class="tr-title">Valuation Multiples and Transaction Comparables</div><div class="tr-dots"></div><div class="tr-pg">12</div></div>
     <div class="toc-row"><div class="tr-title">Geographic Whitespace and Acquisition Pipeline Priorities</div><div class="tr-dots"></div><div class="tr-pg">13</div></div>
     <div class="toc-row"><div class="tr-title">Competitive Pressure, Timing, and Deal Velocity</div><div class="tr-dots"></div><div class="tr-pg">14</div></div>
