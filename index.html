@@ -93,7 +93,7 @@ body {
   top: 105px;
   left: 32px;
   right: 32px;
-  bottom: 392px;   /* band height 360px + 32px white gap below photo = balanced margins */
+  bottom: 468px;   /* actual band height 436px + 32px white gap = balanced margins */
   overflow: hidden;
 }
 
@@ -541,12 +541,12 @@ body {
 <div class="cover">
 
   <!-- Logo on white space above photo -->
-  <div class="cv-logo-area">
-    <img src="stoc-logo.png" style="height:44px; width:auto;">
+  <div class="cv-logo-area" style="min-height:44px;">
+    <img src="stoc-logo.png" style="height:44px; width:auto; display:block;">
   </div>
 
   <!-- Inset photo with stripes on both sides -->
-  <div class="cv-photo-wrap">
+  <div class="cv-photo-wrap" style="background:#1B3550;">
     <img src="cover-photo.jpg" style="width:100%; height:100%; object-fit:cover; display:block;">
     <div class="cv-stripes-left"></div>
   </div>
