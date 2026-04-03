@@ -296,6 +296,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 /* ── About section ── */
@@ -594,84 +595,104 @@ body {
 
   <div class="p3-body">
 
-    <!-- ABOUT — navy band, full bleed, white text -->
-    <div style="background: var(--navy); padding: 32px 44px 30px;">
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#ffffff; margin-bottom:14px;">About STOC Advisory</div>
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; line-height:1.2; color:#fff; max-width:600px; margin-bottom:14px; letter-spacing:-0.2px;">Partnering with middle-market businesses and private equity sponsors to accelerate growth, mitigate risk, and deliver lasting impact.</div>
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:rgba(255,255,255,0.62); line-height:1.72; max-width:680px; margin-bottom:24px;">STOC Advisory is a business advisory firm specializing in transaction advisory services, corporate development, and CFO advisory. We work alongside management teams and private equity sponsors through every stage of the acquisition lifecycle, bringing rigorous financial analysis and hands-on execution to each engagement. Our teams operate out of Baltimore, Minneapolis, Nashville, and Dallas, built for the middle market and accountable as a dedicated partner.</div>
+    <!-- ── ABOUT STOC ── white background, strong type hierarchy -->
+    <div style="padding: 36px 44px 0; border-bottom: 2px solid #111;">
 
-      <!-- Mission + Vision on navy -->
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.12);">
+      <!-- Section label — navy, left-border accent -->
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+        <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">About STOC Advisory</div>
+      </div>
+
+      <!-- Two-column layout: headline left, body+mission right -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-bottom:28px;">
         <div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.90); margin-bottom:6px;">Mission</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:400; color:rgba(255,255,255,0.52); line-height:1.65;">To deliver tailored financial insights and strategic guidance that drive successful transactions and long-term growth.</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:20px; font-weight:800; line-height:1.25; color:#111; letter-spacing:-0.3px;">Partnering with middle-market businesses and private equity sponsors to accelerate growth, mitigate risk, and deliver lasting impact.</div>
         </div>
         <div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.90); margin-bottom:6px;">Vision</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:400; color:rgba(255,255,255,0.52); line-height:1.65;">To be the most trusted advisor for middle-market companies and private equity partners.</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:#333; line-height:1.75; margin-bottom:18px;">STOC Advisory is a business advisory firm specializing in transaction advisory services, corporate development, and CFO advisory. We work alongside management teams and private equity sponsors through every stage of the acquisition lifecycle, bringing rigorous financial analysis and hands-on execution to each engagement.</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div style="border-left:2px solid #1275B0; padding-left:10px;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700; color:#111; margin-bottom:4px;">Mission</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.6;">To deliver tailored financial insights and strategic guidance that drive successful transactions and long-term growth.</div>
+            </div>
+            <div style="border-left:2px solid #1275B0; padding-left:10px;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:700; color:#111; margin-bottom:4px;">Vision</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.6;">To be the most trusted advisor for middle-market companies and private equity partners.</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Values — slightly lighter navy cards on dark band -->
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px;">
-        <div style="background:#1275B0; border:1px solid rgba(255,255,255,0.15); padding:13px 14px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Integrity</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:rgba(255,255,255,0.45); line-height:1.5;">Upholding the highest ethical standards.</div>
+      <!-- Values — 4 navy cards, full width, flush to section border -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin: 0 -44px;">
+        <div style="background:#0D1B2F; padding:18px 22px; border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:5px;">Integrity</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:rgba(255,255,255,0.48); line-height:1.5;">Upholding the highest ethical standards.</div>
         </div>
-        <div style="background:#1275B0; border:1px solid rgba(255,255,255,0.15); padding:13px 14px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Collaboration</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:rgba(255,255,255,0.45); line-height:1.5;">Partnering closely with management teams.</div>
+        <div style="background:#0D1B2F; padding:18px 22px; border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:5px;">Collaboration</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:rgba(255,255,255,0.48); line-height:1.5;">Partnering closely with management teams.</div>
         </div>
-        <div style="background:#1275B0; border:1px solid rgba(255,255,255,0.15); padding:13px 14px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Excellence</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:rgba(255,255,255,0.45); line-height:1.5;">Delivering rigorous, data-driven analysis.</div>
+        <div style="background:#0D1B2F; padding:18px 22px; border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:5px;">Excellence</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:rgba(255,255,255,0.48); line-height:1.5;">Delivering rigorous, data-driven analysis.</div>
         </div>
-        <div style="background:#1275B0; border:1px solid rgba(255,255,255,0.15); padding:13px 14px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Innovation</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:rgba(255,255,255,0.45); line-height:1.5;">Adapting to evolving market dynamics.</div>
+        <div style="background:#0D1B2F; padding:18px 22px;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:5px;">Innovation</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:rgba(255,255,255,0.48); line-height:1.5;">Adapting to evolving market dynamics.</div>
         </div>
       </div>
     </div>
 
-    <!-- CDS — very light warm gray background, distinct section -->
-    <div style="background:#F3F1EE; flex:1; padding:28px 44px 28px;">
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--navy); margin-bottom:12px;">Corporate Development Support (CDS)</div>
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:21px; font-weight:800; color:var(--navy); letter-spacing:-0.2px; line-height:1.2; margin-bottom:8px; max-width:520px;">Hands-on M&amp;A Support, From Pipeline to Close</div>
-      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:#333; line-height:1.72; max-width:680px; margin-bottom:22px;">STOC's Corporate Development Support practice helps private equity-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. We bring proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management to sponsors and platforms that want to move with conviction. The work is hands-on and embedded alongside internal teams.</div>
+    <!-- ── CDS ── white background, fills remaining space -->
+    <div style="padding: 28px 44px 0; flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden;">
 
-      <!-- 2x3 deliverables — white cards on gray background -->
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px;">
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">01</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">Proactive Deal Sourcing</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Target identification through direct outreach, relationship-building, and market mapping.</div>
-        </div>
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">02</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">Target Screening &amp; Fit</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Evaluating strategic alignment, financial profile, and integration fit.</div>
-        </div>
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">03</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">CRM &amp; Pipeline Management</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Building and maintaining the deal CRM with standardized stages and disciplined follow-up.</div>
-        </div>
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">04</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">Diligence Coordination</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Aligning internal stakeholders, gathering materials, and flagging early deal issues.</div>
-        </div>
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">05</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">Valuation &amp; Deal Tracking</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Compiling financials, normalizing data, and providing valuation context for bid decisions.</div>
-        </div>
-        <div style="background:#fff; border-top:3px solid #1275B0; padding:15px 16px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">06</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:var(--navy); margin-bottom:4px; line-height:1.3;">Leadership Reporting</div>
-          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Pipeline summaries, weekly deal updates, and IC-ready materials for sponsors.</div>
-        </div>
+      <!-- Section label -->
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">Corporate Development Support (CDS)</div>
       </div>
+
+      <!-- Headline + intro two-col -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-bottom:24px;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:20px; font-weight:800; line-height:1.25; color:#111; letter-spacing:-0.3px;">Hands-On M&amp;A Support, From Pipeline to Close</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:#333; line-height:1.75;">STOC's CDS practice helps PE-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. Proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management — hands-on and embedded alongside internal teams.</div>
+      </div>
+
+      <!-- 6 deliverables — 3 columns, clean rows with ruled separators -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:0; border-top:1px solid #ddd; height:360px;">
+          <div style="padding:26px 20px 26px 0; border-bottom:1px solid #ddd; border-right:1px solid #ddd; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">01</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">Proactive Deal Sourcing</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Target identification through direct outreach, relationship-building, and market mapping.</div>
+          </div>
+          <div style="padding:26px 20px; border-bottom:1px solid #ddd; border-right:1px solid #ddd; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">02</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">Target Screening &amp; Fit</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Evaluating strategic alignment, financial profile, and integration fit.</div>
+          </div>
+          <div style="padding:26px 0 26px 20px; border-bottom:1px solid #ddd; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">03</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">CRM &amp; Pipeline Management</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Building and maintaining the deal CRM with standardized stages and disciplined follow-up.</div>
+          </div>
+          <div style="padding:26px 20px 26px 0; border-right:1px solid #ddd; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">04</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">Diligence Coordination</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Aligning internal stakeholders, gathering materials, and flagging early deal issues.</div>
+          </div>
+          <div style="padding:26px 20px; border-right:1px solid #ddd; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">05</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">Valuation &amp; Deal Tracking</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Compiling financials, normalizing data, and providing valuation context for bid decisions.</div>
+          </div>
+          <div style="padding:16px 0 16px 20px; ">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">06</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; color:#111; margin-bottom:4px; line-height:1.3;">Leadership Reporting</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; line-height:1.55;">Pipeline summaries, weekly deal updates, and IC-ready materials for sponsors.</div>
+          </div>
+        </div>
     </div>
 
   </div>
