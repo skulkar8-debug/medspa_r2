@@ -45,7 +45,7 @@ body {
 
 
 /* ═══════════════════════════════════════════
-   PAGE 1 — COVER
+   PAGE 1 COVER
    Bain exactly:
    - White page
    - Logo top-left on white, ~32px from top/left
@@ -86,8 +86,8 @@ body {
   text-transform: uppercase;
 }
 
-/* Photo block — inset with side margins, top just below logo area.
-   Bottom edge sits DIRECTLY on top of the navy band — zero gap. */
+/* Photo block inset with side margins, top just below logo area.
+   Bottom edge sits DIRECTLY on top of the navy band zero gap. */
 .cv-photo-wrap {
   position: absolute;
   top: 105px;
@@ -133,7 +133,7 @@ body {
   opacity: 0.9;
 }
 
-/* Navy band — fixed height at bottom, title at TOP of band */
+/* Navy band fixed height at bottom, title at TOP of band */
 .cv-band {
   position: absolute;
   bottom: 0;
@@ -147,7 +147,7 @@ body {
   justify-content: space-between;
 }
 
-/* Title sits at the top of the band — matches Bain exactly */
+/* Title sits at the top of the band matches Bain exactly */
 .cv-band-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 50px;
@@ -188,7 +188,7 @@ body {
 
 
 /* ═══════════════════════════════════════════
-   PAGE 2 — DISCLAIMER
+   PAGE 2 DISCLAIMER
    Bain exactly:
    - No logo, completely blank white top 2/3
    - One paragraph block near bottom
@@ -273,12 +273,15 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* PAGE FOOTER — centered page number like Bain */
+/* PAGE FOOTER centered page number like Bain */
 .pg-ftr {
   flex-shrink: 0;
   text-align: center;
   padding: 14px 0 16px;
   border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .pg-ftr span {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -286,10 +289,17 @@ body {
   font-weight: 400;
   color: var(--gray);
 }
+.pgf-text { display: none !important; }
+.pgf-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #BBB;
+}
 
 
 /* ═══════════════════════════════════════════
-   PAGE 3 — ABOUT STOC + CDS
+   PAGE 3 ABOUT STOC + CDS
    ═══════════════════════════════════════════ */
 .p3-body {
   flex: 1;
@@ -306,8 +316,8 @@ body {
 }
 
 /*
-   SECTION HEADING — this is the "About STOC Advisory" label.
-   Making it large, bold, fully readable — NOT small caps, NOT faded.
+   SECTION HEADING this is the "About STOC Advisory" label.
+   Making it large, bold, fully readable NOT small caps, NOT faded.
    Bain uses bold black headings for section titles on content pages.
 */
 .sec-heading {
@@ -389,7 +399,7 @@ body {
   flex: 1;
 }
 
-/* CDS heading — same bold treatment */
+/* CDS heading same bold treatment */
 .cds-heading {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 22px;
@@ -459,7 +469,7 @@ body {
 
 
 /* ═══════════════════════════════════════════
-   PAGE 4 — TABLE OF CONTENTS
+   PAGE 4 TABLE OF CONTENTS
    Bain exactly:
    - "Contents" in navy bold ~36px, left-aligned
    - NO group headers, just entries
@@ -471,7 +481,7 @@ body {
   flex: 1;
 }
 
-/* "Contents" in navy bold — matching Bain's red bold */
+/* "Contents" in navy bold matching Bain's red bold */
 .toc-h {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 36px;
@@ -482,7 +492,7 @@ body {
   line-height: 1;
 }
 
-/* Entry rows — Bain has generous spacing, plain text, dot leaders */
+/* Entry rows Bain has generous spacing, plain text, dot leaders */
 .toc-row {
   display: flex;
   align-items: baseline;
@@ -518,7 +528,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Section group label inside TOC — minimal, just a spacer line */
+/* Section group label inside TOC minimal, just a spacer line */
 .toc-grp-label {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 9px;
@@ -535,7 +545,7 @@ body {
 
 
 <!-- ═══════════════════
-     PAGE 1 — COVER
+     PAGE 1 COVER
      ═══════════════════ -->
 <div class="page" style="display:block; position:relative; height:var(--ph);">
 <div class="cover">
@@ -568,7 +578,7 @@ body {
 
 
 <!-- ═══════════════════
-     PAGE 2 — DISCLAIMER
+     PAGE 2 DISCLAIMER
      ═══════════════════ -->
 <div class="page">
 <div class="disc-page">
@@ -581,7 +591,7 @@ body {
 
 
 <!-- ═══════════════════
-     PAGE 3 — ABOUT + CDS
+     PAGE 3 ABOUT + CDS
      ═══════════════════ -->
 <div class="page">
 
@@ -598,7 +608,7 @@ body {
     <!-- ── ABOUT STOC ── white background, strong type hierarchy -->
     <div style="padding: 36px 44px 0; border-bottom: 2px solid #111;">
 
-      <!-- Section label — navy, left-border accent -->
+      <!-- Section label navy, left-border accent -->
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
         <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
         <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">About STOC Advisory</div>
@@ -625,7 +635,7 @@ body {
         </div>
       </div>
 
-      <!-- Values — 4 navy cards, full width, flush to section border -->
+      <!-- Values 4 navy cards, full width, flush to section border -->
       <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin: 0 -44px;">
         <div style="background:#0D1B2F; padding:18px 22px; border-right:1px solid rgba(255,255,255,0.08);">
           <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:12px; font-weight:700; color:#fff; margin-bottom:5px;">Integrity</div>
@@ -658,10 +668,10 @@ body {
       <!-- Headline + intro two-col -->
       <div style="display:grid; grid-template-columns:2fr 3fr; gap:40px; margin-bottom:24px;">
         <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:20px; font-weight:800; line-height:1.25; color:#111; letter-spacing:-0.3px;">Hands-On M&amp;A Support, From Pipeline to Close</div>
-        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:#333; line-height:1.75;">STOC's CDS practice helps PE-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. Proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management — hands-on and embedded alongside internal teams.</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:400; color:#333; line-height:1.75;">STOC's CDS practice helps PE-backed and founder-led companies build and execute acquisition pipelines with discipline and speed. Proprietary deal sourcing, targeted outreach, and CRM-integrated pipeline management hands-on and embedded alongside internal teams.</div>
       </div>
 
-      <!-- 6 deliverables — 3 columns, clean rows with ruled separators -->
+      <!-- 6 deliverables 3 columns, clean rows with ruled separators -->
       <div style="display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; height:420px;">
           <div style="padding:26px 20px 26px 0; border-bottom:1px solid #ddd; border-right:1px solid #ddd;">
             <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#1275B0; margin-bottom:5px; text-transform:uppercase;">01</div>
@@ -708,7 +718,7 @@ body {
 
 
 <!-- ═══════════════════
-     PAGE 4 — CONTENTS
+     PAGE 4 CONTENTS
      ═══════════════════ -->
 <div class="page">
 
@@ -748,6 +758,963 @@ body {
   <div class="pg-ftr"><span>4</span></div>
 
 </div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 5 DATASET ASSUMPTIONS + STOC METHODOLOGY
+     ═══════════════════════════════════════════════════════ -->
+<div class="page" style="display:flex; flex-direction:column;">
+
+  <div class="pg-hdr">
+    <div class="pgh-brand-row">
+      <img src="stoc-logo.png" style="height:22px; width:auto;">
+      <div class="pgh-name">STOC Advisory</div>
+    </div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
+  </div>
+
+  <!-- Page body -->
+  <div style="flex:1; padding:36px 44px 0; display:flex; flex-direction:column; gap:0;">
+
+    <!-- Section label -->
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+      <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">Dataset Architecture &amp; Methodology</div>
+    </div>
+
+    <!-- Intro paragraph -->
+    <div style="display:grid; grid-template-columns:2fr 3fr; gap:40px; margin-bottom:28px;">
+      <div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:17px; font-weight:800; line-height:1.28; color:#111; letter-spacing:-0.2px; margin-bottom:14px;">Every metric in this document is produced by a live intelligence pipeline, not a static dataset.</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:400; color:#555; line-height:1.72;">The analysis that follows is generated from STOC's Corporate Development Support (CDS) intelligence layer. Each target in the dataset is scored, classified, and refreshed continuously across 20+ acquisition signals. What follows defines what that means in practice.</div>
+      </div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:400; color:#333; line-height:1.75;">
+        STOC's target universe of 17,383 locations is broader than the American Med Spa Association's enumeration of approximately 10,488 licensed medical spas (AmSpa, 2024 State of the Industry). The difference is intentional. STOC maps all U.S. locations offering medical-grade aesthetic services under physician supervision, including standalone medical spas, cosmetic dermatology practices with aesthetic service lines, and plastic surgery clinics with non-surgical revenue. This broader scope reflects how PE platforms actually build acquisitions routinely include adjacent practice types that operate economically as med spas regardless of licensure classification. Wherever comparisons to AmSpa data are made in this document, the scope differential is disclosed.
+      </div>
+    </div>
+
+    <!-- Three columns: Dataset scope | Signal stack | Accuracy -->
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; margin-bottom:24px;">
+
+      <!-- Col 1: Dataset scope -->
+      <div style="padding:20px 24px 20px 0; border-right:1px solid #ddd;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#1275B0; margin-bottom:12px;">Dataset Scope</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:26px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">17,383</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; margin-bottom:16px;">Tracked targets, as of Q1 2026</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; font-weight:400; color:#333; line-height:1.68; margin-bottom:12px;">Coverage spans all 50 states across 686 Core Based Statistical Areas. The universe includes:</div>
+        <!-- Clean list no bullets, just ruled rows -->
+        <div style="border-top:1px solid #eee; padding:7px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; line-height:1.5; display:flex; justify-content:space-between;"><span>Medical spas (licensed)</span><span style="color:#1275B0; font-weight:600;">~10,500</span></div>
+        <div style="border-top:1px solid #eee; padding:7px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; line-height:1.5; display:flex; justify-content:space-between;"><span>Cosmetic derm + aesthetics</span><span style="color:#1275B0; font-weight:600;">~4,200</span></div>
+        <div style="border-top:1px solid #eee; border-bottom:1px solid #eee; padding:7px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; line-height:1.5; display:flex; justify-content:space-between;"><span>Surgical practices with non-surgical lines</span><span style="color:#1275B0; font-weight:600;">~2,683</span></div>
+      </div>
+
+      <!-- Col 2: Signal stack -->
+      <div style="padding:20px 24px; border-right:1px solid #ddd;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#1275B0; margin-bottom:12px;">Signal Architecture</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:26px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">20+</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; margin-bottom:16px;">Individual data points per target</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; color:#333; line-height:1.68; margin-bottom:12px;">Eight primary signal categories, each comprising multiple underlying data points:</div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Digital maturity</span><span style="color:#555;">Web, booking, social</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Reputation signals</span><span style="color:#555;">Volume, rating, velocity</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Ownership structure</span><span style="color:#555;">Entity, affiliation</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>PE proximity</span><span style="color:#555;">Platform distance, density</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Market supply gap</span><span style="color:#555;">Demand vs. capacity</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Staff &amp; capacity signals</span><span style="color:#555;">Headcount, throughput</span></div>
+        <div style="border-top:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Revenue proxies</span><span style="color:#555;">Transaction, membership</span></div>
+        <div style="border-top:1px solid #eee; border-bottom:1px solid #eee; padding:6px 0; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; display:flex; justify-content:space-between;"><span>Location economics</span><span style="color:#555;">CBSA typology, density</span></div>
+      </div>
+
+      <!-- Col 3: Accuracy + scoring -->
+      <div style="padding:20px 0 20px 24px;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#1275B0; margin-bottom:12px;">Classification Accuracy</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:26px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">93%</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#555; margin-bottom:16px;">Validated classification rate</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; color:#333; line-height:1.68; margin-bottom:16px;">Validated via corporate entity linkage, multi-location URL pattern matching, and state licensing cross-reference. Misclassification rate of 7% reflects edge cases at the licensed/unlicensed boundary.</div>
+
+        <!-- STOC Score definition -->
+        <div style="background:#F4F2EE; padding:14px 16px;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:8px;">How to Read the STOC Score</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; color:#333; line-height:1.65;">A composite 0–100 acquisition readiness score. Higher scores indicate stronger digital presence, lower PE saturation, higher supply gap, and cleaner ownership structure. Scores above 70 represent the primary acquisition priority tier.</div>
+          <div style="margin-top:10px; display:grid; grid-template-columns:repeat(3,1fr); gap:6px; text-align:center;">
+            <div style="border-top:3px solid #1275B0; padding-top:6px;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#0D1B2F;">70–100</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555; margin-top:2px;">Priority tier</div>
+            </div>
+            <div style="border-top:3px solid #6B8CAE; padding-top:6px;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#0D1B2F;">50–69</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555; margin-top:2px;">Monitor tier</div>
+            </div>
+            <div style="border-top:3px solid #ccc; padding-top:6px;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#0D1B2F;">&lt;50</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555; margin-top:2px;">Low priority</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Scoring methodology weight table -->
+    <div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F; margin-bottom:10px;">Score Composition Weight by Pillar</div>
+      <table style="width:100%; border-collapse:collapse; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px;">
+        <thead>
+          <tr style="border-bottom:2px solid #0D1B2F;">
+            <th style="text-align:left; padding:7px 10px 7px 0; font-weight:700; font-size:9px; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Pillar</th>
+            <th style="text-align:left; padding:7px 10px; font-weight:700; font-size:9px; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Signal</th>
+            <th style="text-align:right; padding:7px 10px; font-weight:700; font-size:9px; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Weight</th>
+            <th style="text-align:left; padding:7px 0 7px 10px; font-weight:700; font-size:9px; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">What Good Looks Like</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:7px 10px 7px 0; color:#333;">Digital Maturity</td>
+            <td style="padding:7px 10px; color:#555;">Website quality, online booking, Instagram following</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">25%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">DMS &gt;65, booking enabled, 2K+ followers</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:7px 10px 7px 0; color:#333;">Reputation</td>
+            <td style="padding:7px 10px; color:#555;">Review volume, rating, recency velocity</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">20%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">100+ reviews, 4.6+ rating, active past 90 days</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:7px 10px 7px 0; color:#333;">Supply Gap</td>
+            <td style="padding:7px 10px; color:#555;">Demand index vs. local capacity ratio</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">20%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">Gap score &gt;20% above CBSA median</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:7px 10px 7px 0; color:#333;">PE Proximity</td>
+            <td style="padding:7px 10px; color:#555;">PE-affiliated targets within 25mi radius</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">20%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">0–1 PE neighbors; no platform within 15mi</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:7px 10px 7px 0; color:#333;">Ownership</td>
+            <td style="padding:7px 10px; color:#555;">Entity type, multi-location flag, affiliation</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">10%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">Single-entity, independent, no DSO flag</td>
+          </tr>
+          <tr>
+            <td style="padding:7px 10px 7px 0; color:#333;">Market Typology</td>
+            <td style="padding:7px 10px; color:#555;">CBSA classification, population density tier</td>
+            <td style="padding:7px 10px; text-align:right; color:#0D1B2F; font-weight:600;">5%</td>
+            <td style="padding:7px 0 7px 10px; color:#555;">Mid-density or Suburban Growth CBSA type</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:6px; font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#999;">¹ AmSpa, 2024 Medical Spa State of the Industry Report &nbsp;&nbsp; ² STOC CDS Intelligence Layer, Q1 2026 &nbsp;&nbsp; Weight totals 100% across six primary pillars; 20+ underlying data points map to these categories.</div>
+    </div>
+
+  </div>
+
+  <div class="pg-ftr"><span>5</span></div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 7 CBSA INTELLIGENCE MAP + REGIONAL BREAKDOWN
+     ═══════════════════════════════════════════════════════ -->
+<div class="page" style="display:flex; flex-direction:column;">
+
+  <div class="pg-hdr">
+    <div class="pgh-brand-row">
+      <img src="stoc-logo.png" style="height:22px; width:auto;">
+      <div class="pgh-name">STOC Advisory</div>
+    </div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
+  </div>
+
+  <div style="flex:1; padding:28px 44px 0; display:flex; flex-direction:column;">
+
+    <!-- TITLE FIRST -->
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+      <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">Geographic Intelligence: 686 CBSAs Mapped</div>
+    </div>
+
+    <!-- KPI tiles row: uniform border -->
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:2px solid #0D1B2F; border-bottom:1px solid #ddd; margin-bottom:16px; align-items:stretch;">
+      <div style="padding:13px 16px 13px 0; border-right:1px solid #ddd; display:flex; flex-direction:column; justify-content:flex-start;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">$6.9B</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:3px;">U.S. Market Size, 2024</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Nova One Advisor, 2025</div>
+      </div>
+      <div style="padding:13px 16px; border-right:1px solid #ddd; display:flex; flex-direction:column; justify-content:flex-start;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">&lt;5%</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:3px;">PE Penetration, National</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">71% of CBSAs have zero PE presence</div>
+      </div>
+      <div style="padding:13px 16px; border-right:1px solid #ddd; display:flex; flex-direction:column; justify-content:flex-start;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">17,383</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:3px;">Tracked Targets, Q1 2026</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">STOC CDS. Broader than AmSpa (see p.5)</div>
+      </div>
+      <div style="padding:13px 0 13px 16px; display:flex; flex-direction:column; justify-content:flex-start;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:4px;">81%</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:3px;">Single-Location, Independent</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">AmSpa, 2024 State of the Industry</div>
+      </div>
+    </div>
+
+    <!-- Map + legend row -->
+    <div style="display:grid; grid-template-columns:1fr 200px; gap:20px; margin-bottom:18px;">
+
+      <!-- Static SVG US map with CBSA dots -->
+      <div style="position:relative; background:#F4F2EE; border:1px solid #ddd; overflow:hidden; height:290px;">
+        <svg viewBox="0 0 700 290" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; display:block;">
+          <rect width="700" height="290" fill="#F4F2EE"/>
+          <!-- US states simplified outline -->
+          <path d="M58,52 L95,45 L130,42 L175,40 L210,42 L240,45 L265,44 L290,42 L315,40 L340,38 L365,36 L395,34 L415,35 L435,38 L455,35 L472,30 L488,32 L500,36 L512,40 L520,44 L530,50 L540,55 L548,60 L552,68 L548,76 L542,82 L536,90 L535,100 L538,110 L540,122 L538,134 L532,146 L524,154 L515,162 L505,168 L495,172 L482,178 L468,184 L452,190 L438,196 L422,202 L405,206 L388,208 L370,210 L352,210 L334,208 L316,206 L298,204 L280,204 L262,206 L244,208 L226,208 L210,206 L196,202 L182,196 L168,190 L152,186 L136,184 L120,180 L106,174 L92,166 L80,158 L70,148 L62,138 L56,126 L52,114 L50,102 L50,90 L52,78 L54,66 Z" fill="#E8E4DC" stroke="#C8C0B8" stroke-width="1.2"/>
+          <!-- State borders - rough internal lines -->
+          <line x1="200" y1="40" x2="196" y2="208" stroke="#D0C8C0" stroke-width="0.5" stroke-dasharray="2,3"/>
+          <line x1="330" y1="38" x2="316" y2="208" stroke="#D0C8C0" stroke-width="0.5" stroke-dasharray="2,3"/>
+          <line x1="440" y1="38" x2="435" y2="196" stroke="#D0C8C0" stroke-width="0.5" stroke-dasharray="2,3"/>
+          <line x1="52" y1="130" x2="548" y2="130" stroke="#D0C8C0" stroke-width="0.5" stroke-dasharray="2,3"/>
+
+          <!-- SOUTH dots - dark navy, larger (high target density + high gap) -->
+          <circle cx="388" cy="172" r="8.5" fill="#0D1B2F" opacity="0.9"/><!-- Atlanta -->
+          <circle cx="408" cy="158" r="7" fill="#0D1B2F" opacity="0.88"/><!-- Charlotte -->
+          <circle cx="390" cy="148" r="6" fill="#1A3A5C" opacity="0.85"/><!-- Raleigh -->
+          <circle cx="368" cy="162" r="6" fill="#1A3A5C" opacity="0.82"/><!-- Nashville -->
+          <circle cx="338" cy="186" r="5.5" fill="#1A3A5C" opacity="0.8"/><!-- Birmingham -->
+          <circle cx="310" cy="192" r="9.5" fill="#0D1B2F" opacity="0.9"/><!-- Houston -->
+          <circle cx="286" cy="182" r="10" fill="#0D1B2F" opacity="0.92"/><!-- Dallas -->
+          <circle cx="268" cy="194" r="6" fill="#1A3A5C" opacity="0.82"/><!-- Austin -->
+          <circle cx="255" cy="204" r="5" fill="#1A3A5C" opacity="0.78"/><!-- San Antonio -->
+          <circle cx="428" cy="178" r="6.5" fill="#0D1B2F" opacity="0.85"/><!-- Jacksonville -->
+          <circle cx="448" cy="186" r="6" fill="#0D1B2F" opacity="0.82"/><!-- Orlando -->
+          <circle cx="440" cy="196" r="5.5" fill="#1A3A5C" opacity="0.78"/><!-- Tampa -->
+          <circle cx="350" cy="196" r="5" fill="#1A3A5C" opacity="0.76"/><!-- Jackson -->
+          <circle cx="325" cy="178" r="5.5" fill="#2A5080" opacity="0.75"/><!-- Memphis -->
+          <circle cx="350" cy="168" r="4" fill="#2A5080" opacity="0.7"/>
+          <circle cx="372" cy="148" r="4" fill="#2A5080" opacity="0.68"/>
+          <circle cx="302" cy="168" r="4" fill="#3A6090" opacity="0.65"/>
+          <circle cx="415" cy="168" r="4" fill="#2A5080" opacity="0.7"/>
+          <circle cx="292" cy="200" r="3.5" fill="#3A6090" opacity="0.62"/>
+          <circle cx="460" cy="168" r="3.5" fill="#3A6090" opacity="0.62"/>
+
+          <!-- MIDWEST dots - mid-navy, medium -->
+          <circle cx="448" cy="118" r="9" fill="#1A3A5C" opacity="0.88"/><!-- Chicago -->
+          <circle cx="424" cy="132" r="6" fill="#1A3A5C" opacity="0.82"/><!-- Indianapolis -->
+          <circle cx="405" cy="128" r="5.5" fill="#2A5080" opacity="0.78"/><!-- Columbus -->
+          <circle cx="460" cy="108" r="5" fill="#2A5080" opacity="0.75"/><!-- Milwaukee -->
+          <circle cx="375" cy="128" r="5.5" fill="#2A5080" opacity="0.75"/><!-- St Louis -->
+          <circle cx="352" cy="118" r="5" fill="#2A5080" opacity="0.72"/>
+          <circle cx="340" cy="132" r="4.5" fill="#3A6090" opacity="0.68"/><!-- KC -->
+          <circle cx="432" cy="108" r="4" fill="#3A6090" opacity="0.65"/>
+          <circle cx="395" cy="115" r="4" fill="#3A6090" opacity="0.65"/>
+          <circle cx="476" cy="122" r="3.5" fill="#3A6090" opacity="0.62"/>
+          <circle cx="360" cy="104" r="3.5" fill="#4A70A0" opacity="0.6"/>
+          <circle cx="318" cy="120" r="4" fill="#3A6090" opacity="0.65"/><!-- OKC -->
+
+          <!-- WEST dots - lighter blue, medium -->
+          <circle cx="108" cy="172" r="9" fill="#2A5080" opacity="0.82"/><!-- LA -->
+          <circle cx="90" cy="148" r="7" fill="#2A5080" opacity="0.8"/><!-- SF -->
+          <circle cx="112" cy="188" r="5.5" fill="#3A6090" opacity="0.76"/><!-- SD -->
+          <circle cx="148" cy="178" r="5.5" fill="#3A6090" opacity="0.74"/><!-- Phoenix -->
+          <circle cx="125" cy="138" r="5" fill="#3A6090" opacity="0.72"/><!-- Sacramento -->
+          <circle cx="94" cy="110" r="4.5" fill="#4A70A0" opacity="0.68"/><!-- Portland -->
+          <circle cx="96" cy="92" r="5" fill="#4A70A0" opacity="0.7"/><!-- Seattle -->
+          <circle cx="198" cy="148" r="5.5" fill="#3A6090" opacity="0.72"/><!-- Denver -->
+          <circle cx="172" cy="162" r="4" fill="#4A70A0" opacity="0.65"/>
+          <circle cx="185" cy="136" r="3.5" fill="#4A70A0" opacity="0.62"/>
+          <circle cx="134" cy="118" r="3.5" fill="#4A70A0" opacity="0.6"/>
+
+          <!-- NORTHEAST dots - smaller, lighter (higher PE rate) -->
+          <circle cx="558" cy="102" r="8" fill="#3A6090" opacity="0.78"/><!-- NYC -->
+          <circle cx="548" cy="88" r="5.5" fill="#3A6090" opacity="0.74"/><!-- Boston -->
+          <circle cx="545" cy="114" r="4.5" fill="#4A70A0" opacity="0.7"/><!-- Philly -->
+          <circle cx="532" cy="122" r="4.5" fill="#4A70A0" opacity="0.68"/><!-- DC -->
+          <circle cx="560" cy="116" r="3.5" fill="#5A80B0" opacity="0.64"/>
+          <circle cx="562" cy="92" r="3" fill="#5A80B0" opacity="0.62"/>
+          <circle cx="538" cy="98" r="3" fill="#5A80B0" opacity="0.6"/>
+
+          <!-- PE platform markers: small orange diamonds -->
+          <path d="M382,166 L388,172 L382,178 L376,172 Z" fill="none" stroke="#C8871E" stroke-width="1.5"/><!-- Atlanta PE -->
+          <path d="M106,170 L112,176 L106,182 L100,176 Z" fill="none" stroke="#C8871E" stroke-width="1.5"/><!-- LA PE -->
+          <path d="M446,116 L452,122 L446,128 L440,122 Z" fill="none" stroke="#C8871E" stroke-width="1.5"/><!-- Chicago PE -->
+          <path d="M554,100 L560,106 L554,112 L548,106 Z" fill="none" stroke="#C8871E" stroke-width="1.5"/><!-- NYC PE -->
+          <path d="M403,156 L409,162 L403,168 L397,162 Z" fill="none" stroke="#C8871E" stroke-width="1.5"/><!-- Charlotte PE -->
+
+          <!-- Region labels faint -->
+          <text x="155" y="170" font-family="Plus Jakarta Sans,sans-serif" font-size="8" font-weight="700" fill="#0D1B2F" opacity="0.25" letter-spacing="2">WEST</text>
+          <text x="365" y="112" font-family="Plus Jakarta Sans,sans-serif" font-size="8" font-weight="700" fill="#0D1B2F" opacity="0.25" letter-spacing="2">MIDWEST</text>
+          <text x="340" y="230" font-family="Plus Jakarta Sans,sans-serif" font-size="8" font-weight="700" fill="#0D1B2F" opacity="0.25" letter-spacing="2">SOUTH</text>
+          <text x="512" y="80" font-family="Plus Jakarta Sans,sans-serif" font-size="8" font-weight="700" fill="#0D1B2F" opacity="0.25" letter-spacing="2">NE</text>
+        </svg>
+      </div>
+
+      <!-- Legend + reading guide -->
+      <div style="display:flex; flex-direction:column; gap:12px; justify-content:center;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:2px;">How to Read</div>
+
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:5px;">Dot size = target count</div>
+          <div style="display:flex; align-items:flex-end; gap:8px;">
+            <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <div style="width:6px; height:6px; border-radius:50%; background:#0D1B2F;"></div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888;">&lt;50</div>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <div style="width:12px; height:12px; border-radius:50%; background:#0D1B2F;"></div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888;">50-150</div>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:3px;">
+              <div style="width:16px; height:16px; border-radius:50%; background:#0D1B2F;"></div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888;">150+</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:5px;">Dot shade = supply gap</div>
+          <div style="height:10px; background:linear-gradient(to right, #8AAED0, #0D1B2F); border-radius:1px; margin-bottom:3px;"></div>
+          <div style="display:flex; justify-content:space-between;">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888;">Lower</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888;">Higher</div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:600; color:#333; margin-bottom:5px;">PE platform presence</div>
+          <div style="display:flex; align-items:center; gap:7px;">
+            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8,1 L15,8 L8,15 L1,8 Z" fill="none" stroke="#C8871E" stroke-width="1.8"/></svg>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555;">Active PE platform</div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid #ddd; padding-top:10px; font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; line-height:1.55;">Dot positions illustrative. Final map uses 686 verified CBSA centroids. Q1 2026.</div>
+      </div>
+    </div>
+
+    <!-- 4 REGIONAL CARDS -->
+    <div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:10px;">Regional Intelligence Breakdown</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid #ddd;">
+
+        <!-- SOUTH -->
+        <div style="padding:16px 18px; border-right:1px solid #ddd; border-top:3px solid #0D1B2F;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#0D1B2F; margin-bottom:12px; letter-spacing:0.5px;">South</div>
+          <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">CBSAs</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">218</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Targets</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">9,240</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Share</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">37%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg STOC</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">74.8</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">PE Rate</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">3.2%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg Gap</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#0D1B2F;">+29%</div>
+            </div>
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#0D1B2F; font-weight:600; margin-bottom:5px;">Top CBSA: Charlotte-Concord, NC</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; line-height:1.55;">Priority markets: 42<br>Zero-PE CBSAs: 168</div>
+        </div>
+
+        <!-- MIDWEST -->
+        <div style="padding:16px 18px; border-right:1px solid #ddd; border-top:3px solid #1A3A5C;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#1A3A5C; margin-bottom:12px; letter-spacing:0.5px;">Midwest</div>
+          <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">CBSAs</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">186</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Targets</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">6,420</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Share</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">26%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg STOC</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">71.3</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">PE Rate</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">2.8%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg Gap</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#1A3A5C;">+24%</div>
+            </div>
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#1A3A5C; font-weight:600; margin-bottom:5px;">Top CBSA: Columbus, OH</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; line-height:1.55;">Priority markets: 31<br>Zero-PE CBSAs: 152</div>
+        </div>
+
+        <!-- WEST -->
+        <div style="padding:16px 18px; border-right:1px solid #ddd; border-top:3px solid #3A6090;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#3A6090; margin-bottom:12px; letter-spacing:0.5px;">West</div>
+          <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">CBSAs</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">156</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Targets</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">5,840</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Share</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">23%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg STOC</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">65.2</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">PE Rate</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">4.6%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg Gap</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#3A6090;">+16%</div>
+            </div>
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#3A6090; font-weight:600; margin-bottom:5px;">Top CBSA: Denver-Aurora, CO</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; line-height:1.55;">Priority markets: 18<br>Zero-PE CBSAs: 98</div>
+        </div>
+
+        <!-- NORTHEAST -->
+        <div style="padding:16px 18px; border-top:3px solid #7A90A8;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:800; color:#7A90A8; margin-bottom:12px; letter-spacing:0.5px;">Northeast</div>
+          <div style="display:flex; flex-direction:column; gap:7px; margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">CBSAs</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">126</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Targets</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">3,353</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Share</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">14%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg STOC</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">58.4</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">PE Rate</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">6.8%</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#888;">Avg Gap</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; color:#7A90A8;">+9%</div>
+            </div>
+          </div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#7A90A8; font-weight:600; margin-bottom:5px;">Top CBSA: Boston-Cambridge, MA</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; line-height:1.55;">Priority markets: 8<br>Zero-PE CBSAs: 70</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pg-ftr"><span>6</span></div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 8 CONSOLIDATION LANDSCAPE
+     ═══════════════════════════════════════════════════════ -->
+<div class="page" style="display:flex; flex-direction:column;">
+
+  <div class="pg-hdr">
+    <div class="pgh-brand-row">
+      <img src="stoc-logo.png" style="height:22px; width:auto;">
+      <div class="pgh-name">STOC Advisory</div>
+    </div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
+  </div>
+
+  <div style="flex:1; padding:28px 44px 0; display:flex; flex-direction:column; min-height:0;">
+
+    <!-- Section label -->
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+      <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">PE Consolidation Landscape</div>
+    </div>
+
+    <!-- Headline full-width -->
+    <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:18px; font-weight:800; line-height:1.25; color:#111; letter-spacing:-0.2px; margin-bottom:22px; max-width:580px;">PE has touched less than 5% of the market. In 71% of CBSAs, no platform has arrived. That is not a market in transition; that is a market waiting to be entered.</div>
+
+    <!-- HISTOGRAM: Full width at top -->
+    <div style="border-top:1px solid #ddd; padding-top:20px; margin-bottom:20px;">
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:12px;">PE Penetration Distribution: 686 CBSAs</div>
+      <svg viewBox="0 0 706 160" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block;">
+        <!-- Y axis -->
+        <line x1="44" y1="8" x2="44" y2="128" stroke="#ddd" stroke-width="1"/>
+        <line x1="44" y1="128" x2="700" y2="128" stroke="#ddd" stroke-width="1"/>
+        <!-- Gridlines -->
+        <line x1="44" y1="95" x2="700" y2="95" stroke="#eee" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="44" y1="62" x2="700" y2="62" stroke="#eee" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="44" y1="29" x2="700" y2="29" stroke="#eee" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <!-- Y labels -->
+        <text x="40" y="131" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#aaa" text-anchor="end">0</text>
+        <text x="40" y="98"  font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#aaa" text-anchor="end">150</text>
+        <text x="40" y="65"  font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#aaa" text-anchor="end">300</text>
+        <text x="40" y="32"  font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#aaa" text-anchor="end">450</text>
+        <text x="16" y="70" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#888" text-anchor="middle" transform="rotate(-90,16,70)">CBSAs</text>
+
+        <!-- Bars: scale 488 = 120px height -->
+        <!-- 0%: 488 -> 120px, y=8 -->
+        <rect x="60" y="8" width="110" height="120" fill="#0D1B2F"/>
+        <text x="115" y="5" font-family="Plus Jakarta Sans,sans-serif" font-size="9" font-weight="700" fill="#0D1B2F" text-anchor="middle">488</text>
+        <text x="115" y="142" font-family="Plus Jakarta Sans,sans-serif" font-size="8.5" fill="#333" text-anchor="middle" font-weight="600">0%</text>
+        <text x="115" y="153" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">No PE presence</text>
+
+        <!-- 1-5%: 131 -> 32px, y=96 -->
+        <rect x="230" y="96" width="110" height="32" fill="#2A5080"/>
+        <text x="285" y="92" font-family="Plus Jakarta Sans,sans-serif" font-size="9" font-weight="700" fill="#2A5080" text-anchor="middle">131</text>
+        <text x="285" y="142" font-family="Plus Jakarta Sans,sans-serif" font-size="8.5" fill="#333" text-anchor="middle" font-weight="600">1-5%</text>
+        <text x="285" y="153" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Early entry</text>
+
+        <!-- 6-15%: 48 -> 12px, y=116 -->
+        <rect x="400" y="116" width="110" height="12" fill="#5A80B0"/>
+        <text x="455" y="112" font-family="Plus Jakarta Sans,sans-serif" font-size="9" font-weight="700" fill="#5A80B0" text-anchor="middle">48</text>
+        <text x="455" y="142" font-family="Plus Jakarta Sans,sans-serif" font-size="8.5" fill="#555" text-anchor="middle" font-weight="600">6-15%</text>
+        <text x="455" y="153" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#888" text-anchor="middle">Selective entry</text>
+
+        <!-- 15%+: 21 -> 5px, y=123 -->
+        <rect x="570" y="123" width="110" height="5" fill="#9AB0C8"/>
+        <text x="625" y="119" font-family="Plus Jakarta Sans,sans-serif" font-size="9" font-weight="700" fill="#9AB0C8" text-anchor="middle">21</text>
+        <text x="625" y="142" font-family="Plus Jakarta Sans,sans-serif" font-size="8.5" fill="#888" text-anchor="middle" font-weight="600">15%+</text>
+        <text x="625" y="153" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#bbb" text-anchor="middle">Late stage</text>
+      </svg>
+    </div>
+
+    <!-- TWO PANELS: fill remaining page height equally -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; flex:1; border-top:1px solid #ddd;">
+
+      <!-- LEFT: What the Distribution Means -->
+      <div style="padding:20px 28px 20px 0; border-right:1px solid #ddd; display:flex; flex-direction:column; gap:16px;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F;">What the Distribution Means</div>
+        <table style="width:100%; border-collapse:collapse; font-family:'Plus Jakarta Sans',sans-serif; font-size:10px;">
+          <thead>
+            <tr style="border-bottom:1.5px solid #0D1B2F;">
+              <th style="text-align:left; padding:7px 8px 7px 0; font-size:8px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">PE Rate</th>
+              <th style="text-align:right; padding:7px 8px; font-size:8px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">CBSAs</th>
+              <th style="text-align:right; padding:7px 8px; font-size:8px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Share</th>
+              <th style="text-align:right; padding:7px 8px; font-size:8px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Avg. STOC</th>
+              <th style="text-align:left; padding:7px 0 7px 8px; font-size:8px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Read</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:11px 8px 11px 0; color:#0D1B2F; font-weight:600;">0%</td>
+              <td style="padding:11px 8px; text-align:right; color:#555;">488</td>
+              <td style="padding:11px 8px; text-align:right; color:#0D1B2F; font-weight:700;">71%</td>
+              <td style="padding:11px 8px; text-align:right; color:#0D1B2F; font-weight:700;">74.2</td>
+              <td style="padding:11px 0 11px 8px; color:#333; font-size:9.5px;">Full opportunity</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:11px 8px 11px 0; color:#333; font-weight:500;">1-5%</td>
+              <td style="padding:11px 8px; text-align:right; color:#555;">131</td>
+              <td style="padding:11px 8px; text-align:right; color:#333; font-weight:600;">19%</td>
+              <td style="padding:11px 8px; text-align:right; color:#333; font-weight:600;">68.5</td>
+              <td style="padding:11px 0 11px 8px; color:#333; font-size:9.5px;">Window open</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:11px 8px 11px 0; color:#555;">6-15%</td>
+              <td style="padding:11px 8px; text-align:right; color:#888;">48</td>
+              <td style="padding:11px 8px; text-align:right; color:#555;">7%</td>
+              <td style="padding:11px 8px; text-align:right; color:#555;">61.3</td>
+              <td style="padding:11px 0 11px 8px; color:#555; font-size:9.5px;">Selective only</td>
+            </tr>
+            <tr>
+              <td style="padding:11px 8px 11px 0; color:#aaa;">15%+</td>
+              <td style="padding:11px 8px; text-align:right; color:#aaa;">21</td>
+              <td style="padding:11px 8px; text-align:right; color:#aaa;">3%</td>
+              <td style="padding:11px 8px; text-align:right; color:#aaa;">54.8</td>
+              <td style="padding:11px 0 11px 8px; color:#aaa; font-size:9.5px;">Late stage</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- STOC score compression bars -->
+        <div style="border-top:1px solid #eee; padding-top:14px;">
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:10px;">STOC Score vs. PE Entry</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555;">0% penetration</div>
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; font-weight:700; color:#0D1B2F;">74.2</div>
+              </div>
+              <div style="height:9px; background:#E8E4DC;"><div style="height:9px; background:#0D1B2F; width:74.2%;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555;">1-5% penetration</div>
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; font-weight:700; color:#2A5080;">68.5</div>
+              </div>
+              <div style="height:9px; background:#E8E4DC;"><div style="height:9px; background:#2A5080; width:68.5%;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#555;">6-15% penetration</div>
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; font-weight:700; color:#5A80B0;">61.3</div>
+              </div>
+              <div style="height:9px; background:#E8E4DC;"><div style="height:9px; background:#5A80B0; width:61.3%;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:3px;">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; color:#aaa;">15%+ penetration</div>
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8.5px; font-weight:700; color:#aaa;">54.8</div>
+              </div>
+              <div style="height:9px; background:#E8E4DC;"><div style="height:9px; background:#C0CFDC; width:54.8%;"></div></div>
+            </div>
+          </div>
+          <div style="margin-top:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#bbb;">Source: STOC CDS, Q1 2026.</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Pre-Consolidation Window narrative -->
+      <div style="padding:20px 0 20px 28px; display:flex; flex-direction:column; gap:20px;">
+
+        <!-- Stats at top -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border-bottom:1px solid #ddd; padding-bottom:18px;">
+          <div style="padding-right:20px; border-right:1px solid #eee;">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:32px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:5px;">78%</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; font-weight:600; color:#333; margin-bottom:4px;">of CBSAs are untouched by PE</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:#888; line-height:1.6;">First-mover entry at 5-8x EBITDA still available</div>
+          </div>
+          <div style="padding-left:20px;">
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:32px; font-weight:800; color:#0D1B2F; line-height:1; margin-bottom:5px;">-19 pts</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10px; font-weight:600; color:#333; margin-bottom:4px;">Avg. STOC score, once PE arrives</div>
+            <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9.5px; color:#888; line-height:1.6;">CBSAs with 15%+ PE penetration score 19 points lower than zero-PE markets. Fewer targets remain, seller premiums rise, multiples compress.</div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:10px;">The Pre-Consolidation Window</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; color:#333; line-height:1.82;">The 0% bucket is not simply undiscovered territory. These are markets with sufficient target density, verified supply gaps, and no incumbent PE pressure. Entry economics in a 0% CBSA are structurally different from a 6-15% CBSA: seller expectations are lower, multiples are uncompressed, and de novo remains a viable complement to acquisition.</div>
+        </div>
+
+        <div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F; margin-bottom:10px;">First-Mover Implication</div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; color:#333; line-height:1.82;">In 22% of tracked CBSAs, PE entry has begun compressing multiples. CDS tracks competitive arrival in real time across all 686 markets, flagging which 0% CBSAs are receiving inbound sponsor interest before a transaction closes.</div>
+        </div>
+      </div>
+
+    </div><!-- end 2-panel grid -->
+  </div>
+
+  <div class="pg-ftr"><span>7</span></div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 9 CBSA DEEP DIVE (NAMED REAL MARKETS)
+     ═══════════════════════════════════════════════════════ -->
+<div class="page" style="display:flex; flex-direction:column;">
+
+  <div class="pg-hdr">
+    <div class="pgh-brand-row">
+      <img src="stoc-logo.png" style="height:22px; width:auto;">
+      <div class="pgh-name">STOC Advisory</div>
+    </div>
+    <div class="pgh-doc">U.S. Medical Aesthetics Market Report 2026</div>
+  </div>
+
+  <div style="flex:1; padding:28px 44px 0; display:flex; flex-direction:column; min-height:0;">
+
+    <!-- Section label -->
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+      <div style="width:4px; height:20px; background:#0D1B2F; flex-shrink:0;"></div>
+      <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#0D1B2F;">CBSA Intelligence: Selected Market Profiles</div>
+    </div>
+
+    <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:10.5px; color:#555; margin-bottom:14px; max-width:700px; line-height:1.65;">Markets are organized by region and classified across four strategic postures. The highest-priority targets sit in Tier 2-3 CBSAs with high supply gaps and no PE presence, the exact conditions that make both acquisition and de novo viable simultaneously.</div>
+
+    <!-- FULL-WIDTH SCATTER: Supply Gap vs STOC Score -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#0D1B2F;">Supply Gap vs. STOC Score: 12 Selected CBSAs</div>
+        <div style="display:flex; align-items:center; gap:16px;">
+          <div style="display:flex; align-items:center; gap:5px;"><div style="width:9px; height:9px; border-radius:50%; background:#1B4D3E; flex-shrink:0;"></div><div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#333; font-weight:500;">Platform Build</div></div>
+          <div style="display:flex; align-items:center; gap:5px;"><div style="width:9px; height:9px; border-radius:50%; background:#1A3A5C; flex-shrink:0;"></div><div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#333; font-weight:500;">De Novo Anchor</div></div>
+          <div style="display:flex; align-items:center; gap:5px;"><div style="width:9px; height:9px; border-radius:50%; background:#3A6090; flex-shrink:0;"></div><div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#333; font-weight:500;">Early Consolidation</div></div>
+          <div style="display:flex; align-items:center; gap:5px;"><div style="width:9px; height:9px; border-radius:50%; background:#8AADC4; flex-shrink:0;"></div><div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:8px; color:#888; font-weight:500;">Roll-Up / Monitor</div></div>
+          <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb;">Dot size = target count</div>
+        </div>
+      </div>
+      <svg viewBox="0 0 706 272" xmlns="http://www.w3.org/2000/svg" style="width:100%; display:block; border:1px solid #ddd;">
+
+        <!-- QUADRANT FILLS   distinct, clearly bounded -->
+        <!-- Axes origin at x=64, y=248. Midlines at x=385 (score=70), y=128 (gap=22.5%) -->
+        <rect x="64"  y="8"   width="321" height="120" fill="#DDEAF5" opacity="0.65"/><!-- De Novo: top-left -->
+        <rect x="385" y="8"   width="307" height="120" fill="#D8EFE0" opacity="0.65"/><!-- Platform Build: top-right -->
+        <rect x="64"  y="128" width="321" height="120" fill="#F2EFE9" opacity="0.55"/><!-- Avoid: bottom-left -->
+        <rect x="385" y="128" width="307" height="120" fill="#E4ECF4" opacity="0.55"/><!-- Early Consol: bottom-right -->
+
+        <!-- QUADRANT LABELS   centered in each quadrant, well clear of dots -->
+        <text x="224" y="22" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="9.5" font-weight="700" fill="#1A3A5C" letter-spacing="1.5" opacity="0.75">DE NOVO ANCHOR</text>
+        <text x="538" y="22" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="9.5" font-weight="700" fill="#1E4D2B" letter-spacing="1.5" opacity="0.75">PLATFORM BUILD</text>
+        <text x="224" y="242" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="9" font-weight="600" fill="#BBB" letter-spacing="1.5">AVOID</text>
+        <text x="530" y="242" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="8.5" font-weight="700" fill="#2A4A6B" letter-spacing="0.5" opacity="0.7">EARLY CONSOL.</text>
+
+        <!-- AXES -->
+        <line x1="64" y1="8"   x2="64"  y2="248" stroke="#AAA" stroke-width="1"/>
+        <line x1="64" y1="248" x2="692" y2="248" stroke="#AAA" stroke-width="1"/>
+        <line x1="64" y1="128" x2="692" y2="128" stroke="#AAA" stroke-width="0.7" stroke-dasharray="5,4"/>
+        <line x1="385" y1="8"  x2="385" y2="248" stroke="#AAA" stroke-width="0.7" stroke-dasharray="5,4"/>
+
+        <!-- AXIS LABELS -->
+        <text x="378" y="270" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="8" fill="#666">STOC Score (acquisition readiness, 0-100)</text>
+        <text x="20" y="128" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="8" fill="#666" transform="rotate(-90,20,128)">Supply Gap</text>
+        <text x="68"  y="257" font-family="Plus Jakarta Sans,sans-serif" font-size="7" fill="#bbb">Low</text>
+        <text x="688" y="257" font-family="Plus Jakarta Sans,sans-serif" font-size="7" fill="#bbb" text-anchor="end">High</text>
+        <text x="60"  y="251" font-family="Plus Jakarta Sans,sans-serif" font-size="7" fill="#bbb" text-anchor="end">Low</text>
+        <text x="60"  y="12"  font-family="Plus Jakarta Sans,sans-serif" font-size="7" fill="#bbb" text-anchor="end">High</text>
+
+        <!--
+          COORDINATE MATH:
+          X: score 50-90 → x 64-692 (range=628). x = 64 + (score-50)/40 * 628
+          Y: gap 0-45%  → y 248-8  (range=240). y = 248 - gap/45 * 240
+          Quadrant dividers at: score=70 → x=385, gap=22.5% → y=128
+
+          Charlotte  87  34%  → x=645  y=67
+          Nashville  85  31%  → x=613  y=82
+          DFW        83  28%  → x=582  y=97   (largest dot: 521 targets)
+          Raleigh    82  38%  → x=566  y=45
+          Austin     80  42%  → x=535  y=24
+          Columbus   78  29%  → x=504  y=93   ← WAS WRONG at cx=190, now fixed
+          Indianapolis 76 22% → x=472  y=131
+          KC         74  19%  → x=440  y=146
+          OKC        73  26%  → x=425  y=110
+          Denver     68  11%  → x=347  y=189
+          Phoenix    65  8%   → x=299  y=205  (large dot: 287 targets)
+          Boston     57  3%   → x=174  y=232
+        -->
+
+        <!-- === PLATFORM BUILD (dark forest green) === -->
+        <circle cx="645" cy="67"  r="7.5" fill="#1B4D3E"/><!-- Charlotte -->
+        <text x="645" y="70" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">87</text>
+        <circle cx="613" cy="82"  r="7"   fill="#1B4D3E" opacity="0.9"/><!-- Nashville -->
+        <text x="613" y="85" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">85</text>
+        <circle cx="582" cy="97"  r="10"  fill="#1B4D3E" opacity="0.82"/><!-- DFW biggest -->
+        <text x="582" y="100" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6.5" fill="white" font-weight="700">83</text>
+
+        <!-- Charlotte: label above-left to avoid Nashville overlap -->
+        <text x="645" y="54" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1B4D3E">Charlotte</text>
+        <!-- Nashville: label left -->
+        <text x="598" y="80" text-anchor="end" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1B4D3E">Nashville</text>
+        <!-- DFW: label left of dot -->
+        <text x="567" y="99" text-anchor="end" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1B4D3E">DFW</text>
+
+        <!-- === DE NOVO ANCHOR (navy) === -->
+        <circle cx="566" cy="45"  r="6.5" fill="#1A3A5C"/><!-- Raleigh -->
+        <text x="566" y="48" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">82</text>
+        <circle cx="535" cy="24"  r="6"   fill="#1A3A5C"/><!-- Austin -->
+        <text x="535" y="27" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">80</text>
+        <circle cx="504" cy="93"  r="6"   fill="#1A3A5C" opacity="0.88"/><!-- Columbus   FIXED position -->
+
+        <!-- Raleigh: label right -->
+        <text x="576" y="43" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1A3A5C">Raleigh</text>
+        <!-- Austin: label below-right to avoid top clip -->
+        <text x="549" y="38" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1A3A5C">Austin</text>
+        <!-- Columbus: label left, since DFW is to its right -->
+        <text x="490" y="93" text-anchor="end" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1A3A5C">Columbus</text>
+
+        <!-- === EARLY CONSOLIDATION (steel blue) === -->
+        <circle cx="472" cy="131" r="5.5" fill="#3A6090"/><!-- Indianapolis -->
+        <text x="472" y="134" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">76</text>
+        <circle cx="440" cy="146" r="5"   fill="#3A6090" opacity="0.88"/><!-- KC -->
+        <text x="440" y="149" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">74</text>
+        <circle cx="425" cy="110" r="5"   fill="#3A6090" opacity="0.85"/><!-- OKC -->
+        <text x="425" y="113" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">73</text>
+
+        <!-- Indianapolis: label right -->
+        <text x="481" y="130" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="600" fill="#3A6090">Indianapolis</text>
+        <!-- KC: label below -->
+        <text x="440" y="159" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="600" fill="#3A6090">Kansas City</text>
+        <!-- OKC: label above -->
+        <text x="425" y="98" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" font-weight="600" fill="#3A6090">OKC</text>
+
+        <!-- === ROLL-UP / MONITOR (gray-blue) === -->
+        <circle cx="347" cy="189" r="7"   fill="#8AADC4" opacity="0.85"/><!-- Denver -->
+        <text x="347" y="192" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">68</text>
+        <circle cx="299" cy="205" r="8"   fill="#8AADC4" opacity="0.80"/><!-- Phoenix -->
+        <text x="299" y="208" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="white" font-weight="700">65</text>
+        <circle cx="174" cy="232" r="5"   fill="#C0CDD8" opacity="0.88"/><!-- Boston -->
+        <text x="174" y="235" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="6" fill="#666" font-weight="700">57</text>
+
+        <!-- Denver: label above -->
+        <text x="347" y="178" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#666">Denver</text>
+        <!-- Phoenix: label above-left -->
+        <text x="284" y="195" text-anchor="end" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#666">Phoenix</text>
+        <!-- Boston: label above -->
+        <text x="174" y="221" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="7.5" fill="#AAA">Boston</text>
+
+        <!-- Legend removed from SVG - shown below as HTML -->
+      </svg>
+    </div>
+
+    <!-- REGION-GROUPED TABLE: compact, fills remaining space -->
+    <table style="width:100%; border-collapse:collapse; font-family:'Plus Jakarta Sans',sans-serif; font-size:9px; flex:1;">
+      <thead>
+        <tr style="border-bottom:1.5px solid #0D1B2F;">
+          <th style="text-align:left; padding:5px 6px 5px 0; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Market</th>
+          <th style="text-align:right; padding:5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Targets</th>
+          <th style="text-align:right; padding:5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">STOC</th>
+          <th style="text-align:right; padding:5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Supply Gap</th>
+          <th style="text-align:right; padding:5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">PE Rate</th>
+          <th style="text-align:right; padding:5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">PE Nbrs</th>
+          <th style="text-align:left; padding:5px 0 5px 6px; font-size:7.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#0D1B2F;">Classification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- SOUTH -->
+        <tr><td colspan="7" style="padding:6px 0 3px; font-size:7.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#0D1B2F; opacity:0.35; border-bottom:1px solid #eee;">South</td></tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#0D1B2F; font-weight:600;">Charlotte-Concord, NC</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">312</td>
+          <td style="padding:5px 6px; text-align:right; color:#0D1B2F; font-weight:700;">87</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+34%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">2.6%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1</td>
+          <td style="padding:5px 0 5px 6px; color:#0D1B2F; font-style:italic;">Platform Build</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#0D1B2F; font-weight:600;">Nashville-Davidson, TN</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">284</td>
+          <td style="padding:5px 6px; text-align:right; color:#0D1B2F; font-weight:700;">85</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+31%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">3.1%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1</td>
+          <td style="padding:5px 0 5px 6px; color:#0D1B2F; font-style:italic;">Platform Build</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#1A3A5C; font-weight:600;">Raleigh-Durham, NC</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">198</td>
+          <td style="padding:5px 6px; text-align:right; color:#1A3A5C; font-weight:700;">82</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+38%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1.5%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">0</td>
+          <td style="padding:5px 0 5px 6px; color:#1A3A5C; font-style:italic;">De Novo Anchor</td>
+        </tr>
+        <!-- SOUTHWEST -->
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#0D1B2F; font-weight:600;">Dallas-Fort Worth, TX</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">521</td>
+          <td style="padding:5px 6px; text-align:right; color:#0D1B2F; font-weight:700;">83</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+28%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">2.9%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">2</td>
+          <td style="padding:5px 0 5px 6px; color:#0D1B2F; font-style:italic;">Platform Build</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#1A3A5C; font-weight:600;">Austin-Round Rock, TX</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">176</td>
+          <td style="padding:5px 6px; text-align:right; color:#1A3A5C; font-weight:700;">80</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+42%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">2.3%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">0</td>
+          <td style="padding:5px 0 5px 6px; color:#1A3A5C; font-style:italic;">De Novo Anchor</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#3A6090; font-weight:600;">Oklahoma City, OK</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">96</td>
+          <td style="padding:5px 6px; text-align:right; color:#3A6090; font-weight:700;">73</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+26%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">0.0%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">0</td>
+          <td style="padding:5px 0 5px 6px; color:#3A6090; font-style:italic;">Early Consolidation</td>
+        </tr>
+        <!-- MIDWEST -->
+        <tr><td colspan="7" style="padding:6px 0 3px; font-size:7.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#0D1B2F; opacity:0.35; border-bottom:1px solid #eee;">Midwest</td></tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#1A3A5C; font-weight:600;">Columbus, OH</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">148</td>
+          <td style="padding:5px 6px; text-align:right; color:#1A3A5C; font-weight:700;">78</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+29%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1.4%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">0</td>
+          <td style="padding:5px 0 5px 6px; color:#1A3A5C; font-style:italic;">De Novo Anchor</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#3A6090; font-weight:600;">Indianapolis, IN</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">134</td>
+          <td style="padding:5px 6px; text-align:right; color:#3A6090; font-weight:700;">76</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+22%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">2.2%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1</td>
+          <td style="padding:5px 0 5px 6px; color:#3A6090; font-style:italic;">Early Consolidation</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#3A6090; font-weight:600;">Kansas City, MO-KS</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">118</td>
+          <td style="padding:5px 6px; text-align:right; color:#3A6090; font-weight:700;">74</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">+19%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1.7%</td>
+          <td style="padding:5px 6px; text-align:right; color:#555;">1</td>
+          <td style="padding:5px 0 5px 6px; color:#3A6090; font-style:italic;">Early Consolidation</td>
+        </tr>
+        <!-- WEST -->
+        <tr><td colspan="7" style="padding:6px 0 3px; font-size:7.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#0D1B2F; opacity:0.35; border-bottom:1px solid #eee;">West</td></tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#555; font-weight:600;">Denver-Aurora, CO</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">211</td>
+          <td style="padding:5px 6px; text-align:right; color:#555; font-weight:700;">68</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">+11%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">5.2%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">3</td>
+          <td style="padding:5px 0 5px 6px; color:#888; font-style:italic;">Roll-Up Only</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f2f2f0;">
+          <td style="padding:5px 6px 5px 0; color:#555; font-weight:600;">Phoenix-Mesa, AZ</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">287</td>
+          <td style="padding:5px 6px; text-align:right; color:#555; font-weight:700;">65</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">+8%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">4.8%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">4</td>
+          <td style="padding:5px 0 5px 6px; color:#888; font-style:italic;">Roll-Up Only</td>
+        </tr>
+        <!-- NORTHEAST -->
+        <tr><td colspan="7" style="padding:6px 0 3px; font-size:7.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#0D1B2F; opacity:0.35; border-bottom:1px solid #eee;">Northeast</td></tr>
+        <tr>
+          <td style="padding:5px 6px 5px 0; color:#555; font-weight:600;">Boston-Cambridge, MA-NH</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">156</td>
+          <td style="padding:5px 6px; text-align:right; color:#555; font-weight:700;">57</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">+3%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">8.3%</td>
+          <td style="padding:5px 6px; text-align:right; color:#888;">6</td>
+          <td style="padding:5px 0 5px 6px; color:#888; font-style:italic;">Monitor</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:6px; font-family:'Plus Jakarta Sans',sans-serif; font-size:7.5px; color:#bbb; line-height:1.5;">All data as of Q1 2026. STOC CDS calculations. Target counts reflect STOC's broader classification scope (see p. 5). Individual target profiles on request.</div>
+
+  </div>
+
+  <div class="pg-ftr"><span>8</span></div>
+
+</div>
+
 
 
 </body>
